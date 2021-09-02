@@ -1,2 +1,2 @@
 # GameMakerProjects
-A repo for my gamemaker projects made in 413 Virtual Worlds
+A repo for the gamemaker projects made in 413 Virtual Worlds
