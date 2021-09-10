@@ -26,5 +26,5 @@ for(var i=0;  i<3; i+=1){
 
 randomize();
 for( var i=0; i<3; i+=1){
-	toggle(lights[irandom(9)]);
+	toggle(lights[irandom(8)]);
 }
