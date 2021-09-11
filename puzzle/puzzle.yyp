@@ -10,6 +10,7 @@
     {"id":{"name":"spr_characterIdleR","path":"sprites/spr_characterIdleR/spr_characterIdleR.yy",},"order":1,},
     {"id":{"name":"spr_characterWalkingBoxR","path":"sprites/spr_characterWalkingBoxR/spr_characterWalkingBoxR.yy",},"order":4,},
     {"id":{"name":"spr_characterIdleBoxL","path":"sprites/spr_characterIdleBoxL/spr_characterIdleBoxL.yy",},"order":7,},
+    {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},"order":0,},
     {"id":{"name":"rm_puzzle","path":"rooms/rm_puzzle/rm_puzzle.yy",},"order":0,},
   ],
   "Options": [
