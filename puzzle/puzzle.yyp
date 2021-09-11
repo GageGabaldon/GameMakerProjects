@@ -1,7 +1,15 @@
 {
   "resources": [
+    {"id":{"name":"spr_characterWalkingL","path":"sprites/spr_characterWalkingL/spr_characterWalkingL.yy",},"order":6,},
     {"id":{"name":"spr_tile_set","path":"sprites/spr_tile_set/spr_tile_set.yy",},"order":0,},
+    {"id":{"name":"spr_characterWalkingR","path":"sprites/spr_characterWalkingR/spr_characterWalkingR.yy",},"order":2,},
     {"id":{"name":"tile_puzzle","path":"tilesets/tile_puzzle/tile_puzzle.yy",},"order":0,},
+    {"id":{"name":"spr_characterIdleBoxR","path":"sprites/spr_characterIdleBoxR/spr_characterIdleBoxR.yy",},"order":3,},
+    {"id":{"name":"spr_characterWalkingBoxL","path":"sprites/spr_characterWalkingBoxL/spr_characterWalkingBoxL.yy",},"order":8,},
+    {"id":{"name":"spr_characterIdleL","path":"sprites/spr_characterIdleL/spr_characterIdleL.yy",},"order":5,},
+    {"id":{"name":"spr_characterIdleR","path":"sprites/spr_characterIdleR/spr_characterIdleR.yy",},"order":1,},
+    {"id":{"name":"spr_characterWalkingBoxR","path":"sprites/spr_characterWalkingBoxR/spr_characterWalkingBoxR.yy",},"order":4,},
+    {"id":{"name":"spr_characterIdleBoxL","path":"sprites/spr_characterIdleBoxL/spr_characterIdleBoxL.yy",},"order":7,},
     {"id":{"name":"rm_puzzle","path":"rooms/rm_puzzle/rm_puzzle.yy",},"order":0,},
   ],
   "Options": [
@@ -40,9 +48,12 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"spr_character.aseprite","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"moving truck.aseprite","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
-    "IDEVersion": "2.3.4.577",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "puzzle",
