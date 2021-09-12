@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_boxPLACEHOLDER",
-    "path": "sprites/spr_boxPLACEHOLDER/spr_boxPLACEHOLDER.yy",
+    "name": "spr_box1",
+    "path": "sprites/spr_box1/spr_box1.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boxPLACEHOLDER",
+  "name": "obj_box1",
   "tags": [],
   "resourceType": "GMObject",
 }
