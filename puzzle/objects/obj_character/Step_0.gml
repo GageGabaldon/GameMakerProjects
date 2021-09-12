@@ -3,14 +3,23 @@ if (boxBeingHeld != noone)
 {
 	boxBeingHeld.x = mouse_x;
 	boxBeingHeld.y = mouse_y;
+	if(keyboard_check_pressed(ord("E")))
+	{
+		boxBeingHeld.image_angle += 90;
+	}
+	else if(keyboard_check_pressed(ord("Q")))
+	{
+		boxBeingHeld.image_angle -= 90;
+	}
 }
 
 // if character picks up box1
 if (!characterHasBox && distance_to_object(obj_box1) < characterBoxDistance
-							&& keyboard_check_pressed(ord("E")))
+							&& keyboard_check_pressed(ord("F")))
 {	
 	characterHasBox = true;
 	boxBeingHeld = obj_box1;
+	boxBeingHeld.image_alpha = .5;
 	// if character was facing right
 	if (sprite_index == spr_characterIdleR || 
 					sprite_index == spr_characterWalkingR)
@@ -24,12 +33,13 @@ if (!characterHasBox && distance_to_object(obj_box1) < characterBoxDistance
 }
 // if character picks up box2
 if (!characterHasBox && distance_to_object(obj_box2) < characterBoxDistance
-							&& keyboard_check_pressed(ord("E")))
+							&& keyboard_check_pressed(ord("F")))
 {	
 	// if character is already holding a box
 	// if character is already holding a box
 	characterHasBox = true;
 	boxBeingHeld = obj_box2;
+	boxBeingHeld.image_alpha = .5;
 	// if character was facing right
 	if (sprite_index == spr_characterIdleR || 
 					sprite_index == spr_characterWalkingR)
@@ -43,11 +53,12 @@ if (!characterHasBox && distance_to_object(obj_box2) < characterBoxDistance
 }
 // if character picks up box3
 if (!characterHasBox && distance_to_object(obj_box3) < characterBoxDistance
-							&& keyboard_check_pressed(ord("E")))
+							&& keyboard_check_pressed(ord("F")))
 {	
 	// if character is already holding a box
 	characterHasBox = true;
 	boxBeingHeld = obj_box3;
+	boxBeingHeld.image_alpha = .5;
 	// if character was facing right
 	if (sprite_index == spr_characterIdleR || 
 					sprite_index == spr_characterWalkingR)
