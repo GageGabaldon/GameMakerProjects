@@ -1,5 +1,4 @@
 
-//check if box needs to be following mouse
 if (boxBeingHeld != noone)
 {
 	boxBeingHeld.x = mouse_x;
@@ -7,15 +6,9 @@ if (boxBeingHeld != noone)
 }
 
 // if character picks up box1
-if (distance_to_object(obj_box1) < 20
+if (!characterHasBox && distance_to_object(obj_box1) < characterBoxDistance
 							&& keyboard_check_pressed(ord("E")))
 {	
-	// if character is already holding a box
-	if (characterHasBox)
-	{
-		// drop boxBehindHeld
-		// boxBeingHeld
-	}
 	characterHasBox = true;
 	boxBeingHeld = obj_box1;
 	// if character was facing right
@@ -30,15 +23,11 @@ if (distance_to_object(obj_box1) < 20
 	}
 }
 // if character picks up box2
-if (distance_to_object(obj_box2) < 20
+if (!characterHasBox && distance_to_object(obj_box2) < characterBoxDistance
 							&& keyboard_check_pressed(ord("E")))
 {	
 	// if character is already holding a box
-	if (characterHasBox)
-	{
-		// drop boxBehindHeld
-		// boxBeingHeld
-	}
+	// if character is already holding a box
 	characterHasBox = true;
 	boxBeingHeld = obj_box2;
 	// if character was facing right
@@ -53,15 +42,10 @@ if (distance_to_object(obj_box2) < 20
 	}
 }
 // if character picks up box3
-if (distance_to_object(obj_box3) < 20
+if (!characterHasBox && distance_to_object(obj_box3) < characterBoxDistance
 							&& keyboard_check_pressed(ord("E")))
 {	
 	// if character is already holding a box
-	if (characterHasBox)
-	{
-		// drop boxBehindHeld
-		// boxBeingHeld
-	}
 	characterHasBox = true;
 	boxBeingHeld = obj_box3;
 	// if character was facing right

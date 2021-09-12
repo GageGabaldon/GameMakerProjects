@@ -5,3 +5,4 @@ walkSpeed = 4;
 // if character has box
 characterHasBox = false;
 boxBeingHeld = noone;
+characterBoxDistance = 2;
