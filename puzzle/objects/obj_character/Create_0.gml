@@ -2,6 +2,7 @@
 image_speed = 0; // how fast should frames be flipped through
 walkSpeed = 4;
 
-// if character is near/ in front of a box
-
+// if character has box
+characterHasBox = false;
+boxBeingHeld = noone;
 

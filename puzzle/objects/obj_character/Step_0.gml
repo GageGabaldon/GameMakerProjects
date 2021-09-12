@@ -1,10 +1,49 @@
-// Movement based on keyboard press
-characterHasBox = false;
-boxBeingHeld = noone;
-index = 0;
 
-allBoxes = [obj_boxPLACEHOLDER];
-numBoxes = 1;
+// if character picks up box
+if (distance_to_object(obj_boxPLACEHOLDER) < 20
+							&& keyboard_check_pressed(ord("E")))
+{	
+	// if character is already holding a box
+	if (characterHasBox)
+	{
+		// drop boxBehindHeld
+		// boxBeingHeld
+	}
+	characterHasBox = true;
+	boxBeingHeld = obj_boxPLACEHOLDER;
+	// if character was facing right
+	if (sprite_index == spr_characterIdleR || 
+					sprite_index == spr_characterWalkingR)
+	{
+		sprite_index = spr_characterIdleBoxR
+	}
+	else
+	{
+		sprite_index = spr_characterIdleBoxL
+	}
+}
+
+// if character drops a box
+if (characterHasBox && keyboard_check_pressed(ord("X")))
+{	
+	characterHasBox = false;
+	boxBeingHeld = noone;
+	// if character was facing right
+	if (sprite_index == spr_characterIdleBoxR || 
+					sprite_index == spr_characterWalkingBoxR)
+	{
+		sprite_index = spr_characterIdleR
+	}
+	else
+	{
+		sprite_index = spr_characterIdleL
+	}
+}
+
+
+
+
+
 
 // if a player stops moving while facing left IDLE
 if (keyboard_check_released(ord("A")))
@@ -62,21 +101,6 @@ if (keyboard_check(ord("D")))
 	{
 		sprite_index = spr_characterWalkingR
 	}
-}
-
-// if character near box
-if (distance_to_object(obj_boxPLACEHOLDER) == 0 
-							&& keyboard_check_pressed(ord("E")))
-{	
-	characterHasBox = true;
-}
-
-// if character drops a box
-if (characterHasBox && (keyboard_check_pressed(ord("X"))))
-{
-	boxBeingHeld.x = obj_character.x
-	boxBeingHeld.y = obj_character.y
-	characterHasBox = false;
 }
 
 
