@@ -77,6 +77,7 @@ if (characterHasBox && keyboard_check_pressed(ord("X")))
 	characterHasBox = false;
 	boxBeingHeld.x = obj_character.x
 	boxBeingHeld.y = obj_character.y
+	boxBeingHeld.image_alpha = 1;
 	boxBeingHeld = noone;
 	// if character was facing right
 	if (sprite_index == spr_characterIdleBoxR || 
