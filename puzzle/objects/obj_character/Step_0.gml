@@ -71,6 +71,46 @@ if (!characterHasBox && distance_to_object(obj_box3) < characterBoxDistance
 	}
 }
 
+// if character pciks up box4
+if (!characterHasBox && distance_to_object(obj_box4) < characterBoxDistance
+							&& keyboard_check_pressed(ord("F")))
+{	
+	// if character is already holding a box
+	characterHasBox = true;
+	boxBeingHeld = obj_box4;
+	boxBeingHeld.image_alpha = .5;
+	// if character was facing right
+	if (sprite_index == spr_characterIdleR || 
+					sprite_index == spr_characterWalkingR)
+	{
+		sprite_index = spr_characterIdleBoxR
+	}
+	else
+	{
+		sprite_index = spr_characterIdleBoxL
+	}
+}
+
+// if character pciks up box5
+if (!characterHasBox && distance_to_object(obj_box5) < characterBoxDistance
+							&& keyboard_check_pressed(ord("F")))
+{	
+	// if character is already holding a box
+	characterHasBox = true;
+	boxBeingHeld = obj_box5;
+	boxBeingHeld.image_alpha = .5;
+	// if character was facing right
+	if (sprite_index == spr_characterIdleR || 
+					sprite_index == spr_characterWalkingR)
+	{
+		sprite_index = spr_characterIdleBoxR
+	}
+	else
+	{
+		sprite_index = spr_characterIdleBoxL
+	}
+}
+
 // if character drops a box
 if (characterHasBox && keyboard_check_pressed(ord("X")))
 {	
