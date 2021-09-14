@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_box4",
-    "path": "sprites/spr_box4/spr_box4.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_box1",
-    "path": "objects/obj_box1/obj_box1.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -33,7 +27,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_box4",
+  "name": "obj_boxParent",
   "tags": [],
   "resourceType": "GMObject",
 }

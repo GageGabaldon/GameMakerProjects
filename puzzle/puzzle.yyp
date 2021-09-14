@@ -15,6 +15,7 @@
     {"id":{"name":"obj_box3","path":"objects/obj_box3/obj_box3.yy",},"order":3,},
     {"id":{"name":"TGMS_1_EasyTweens","path":"scripts/TGMS_1_EasyTweens/TGMS_1_EasyTweens.yy",},"order":4,},
     {"id":{"name":"spr_box5","path":"sprites/spr_box5/spr_box5.yy",},"order":18,},
+    {"id":{"name":"obj_boxParent","path":"objects/obj_boxParent/obj_boxParent.yy",},"order":7,},
     {"id":{"name":"seq_character_walking","path":"sequences/seq_character_walking/seq_character_walking.yy",},"order":0,},
     {"id":{"name":"TGMS_9_Settings","path":"scripts/TGMS_9_Settings/TGMS_9_Settings.yy",},"order":12,},
     {"id":{"name":"TGMS_2_EaseFunctions","path":"scripts/TGMS_2_EaseFunctions/TGMS_2_EaseFunctions.yy",},"order":5,},
