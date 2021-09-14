@@ -34,6 +34,18 @@ else
 		}
 	}	
 	else {
+		if(place_empty(mouse_x, mouse_y, obj_boxParent)){
+					object.x = mouse_x;
+		object.y = mouse_y;
+		object.image_alpha = 1;
+		numBoxes += 1;
+		with(obj_character){
+			obj_character.characterHasBox = false;
+			obj_character.boxBeingHeld = noone;
+			obj_character.sprite_index = spr_characterIdleR;
+		}
+		
+		}
 
 	}
 
