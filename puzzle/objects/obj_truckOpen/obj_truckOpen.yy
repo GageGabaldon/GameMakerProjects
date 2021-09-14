@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_movingTruckOpen",
-    "path": "sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",
+    "name": "spr_truckOpen",
+    "path": "sprites/spr_truckOpen/spr_truckOpen.yy",
   },
   "solid": false,
   "visible": true,

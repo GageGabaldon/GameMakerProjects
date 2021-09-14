@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a76d8864-065f-4a8b-8121-5f4ec592b6b4","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a76d8864-065f-4a8b-8121-5f4ec592b6b4","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},"LayerId":{"name":"6d7c4d3e-7a73-424f-a3ad-ac793b720a53","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_movingTruckOpen","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},"resourceVersion":"1.0","name":"a76d8864-065f-4a8b-8121-5f4ec592b6b4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"LayerId":{"name":"1b34607b-99e1-4ba4-a056-4c6b12f81966","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_movingTruckOpen","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},
+    "spriteId": {"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3adc0142-d931-42b7-a663-43d33e6851f5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a76d8864-065f-4a8b-8121-5f4ec592b6b4","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3eaf9f16-a892-461d-b5e4-5a6c265e9a66","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,18 +54,18 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 115,
+    "yorigin": 55,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_movingTruckOpen","path":"sprites/spr_movingTruckOpen/spr_movingTruckOpen.yy",},
+    "parent": {"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_movingTruckOpen",
+    "name": "spr_truckClosed",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6d7c4d3e-7a73-424f-a3ad-ac793b720a53","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1b34607b-99e1-4ba4-a056-4c6b12f81966","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_movingTruckOpen",
+  "name": "spr_truckClosed",
   "tags": [],
   "resourceType": "GMSprite",
 }
