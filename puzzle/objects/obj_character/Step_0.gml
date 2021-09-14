@@ -13,103 +13,36 @@ if (boxBeingHeld != noone)
 	}
 }
 
-// if character picks up box1
-if (!characterHasBox && distance_to_object(obj_box1) < characterBoxDistance
-							&& keyboard_check_pressed(ord("F")))
+// if character tries to pick up a box
+if (!characterHasBox && keyboard_check_pressed(ord("F")))
 {	
-	characterHasBox = true;
-	boxBeingHeld = obj_box1;
-	boxBeingHeld.image_alpha = .5;
-	// if character was facing right
-	if (sprite_index == spr_characterIdleR || 
-					sprite_index == spr_characterWalkingR)
+	// find what box is within maximum distance and pick it up
+	for (i = 0; i < allBoxesSize; i++)
 	{
-		sprite_index = spr_characterIdleBoxR
+		potentialBox = allBoxes[i];
+		if (distance_to_object(potentialBox) < characterBoxDistance)
+		{
+			characterHasBox = true;
+			boxBeingHeld = potentialBox;
+			boxBeingHeld.image_alpha = .5;
+			// if character was facing right
+			if (sprite_index == spr_characterIdleR || 
+							sprite_index == spr_characterWalkingR)
+			{
+				sprite_index = spr_characterIdleBoxR
+			}
+			else
+			{
+				sprite_index = spr_characterIdleBoxL
+			}
+			
+			// we found a box, do not look for more boxes.
+			break;
+		}
 	}
-	else
-	{
-		sprite_index = spr_characterIdleBoxL
-	}
-}
-// if character picks up box2
-if (!characterHasBox && distance_to_object(obj_box2) < characterBoxDistance
-							&& keyboard_check_pressed(ord("F")))
-{	
-	// if character is already holding a box
-	// if character is already holding a box
-	characterHasBox = true;
-	boxBeingHeld = obj_box2;
-	boxBeingHeld.image_alpha = .5;
-	// if character was facing right
-	if (sprite_index == spr_characterIdleR || 
-					sprite_index == spr_characterWalkingR)
-	{
-		sprite_index = spr_characterIdleBoxR
-	}
-	else
-	{
-		sprite_index = spr_characterIdleBoxL
-	}
-}
-// if character picks up box3
-if (!characterHasBox && distance_to_object(obj_box3) < characterBoxDistance
-							&& keyboard_check_pressed(ord("F")))
-{	
-	// if character is already holding a box
-	characterHasBox = true;
-	boxBeingHeld = obj_box3;
-	boxBeingHeld.image_alpha = .5;
-	// if character was facing right
-	if (sprite_index == spr_characterIdleR || 
-					sprite_index == spr_characterWalkingR)
-	{
-		sprite_index = spr_characterIdleBoxR
-	}
-	else
-	{
-		sprite_index = spr_characterIdleBoxL
-	}
+
 }
 
-// if character pciks up box4
-if (!characterHasBox && distance_to_object(obj_box4) < characterBoxDistance
-							&& keyboard_check_pressed(ord("F")))
-{	
-	// if character is already holding a box
-	characterHasBox = true;
-	boxBeingHeld = obj_box4;
-	boxBeingHeld.image_alpha = .5;
-	// if character was facing right
-	if (sprite_index == spr_characterIdleR || 
-					sprite_index == spr_characterWalkingR)
-	{
-		sprite_index = spr_characterIdleBoxR
-	}
-	else
-	{
-		sprite_index = spr_characterIdleBoxL
-	}
-}
-
-// if character pciks up box5
-if (!characterHasBox && distance_to_object(obj_box5) < characterBoxDistance
-							&& keyboard_check_pressed(ord("F")))
-{	
-	// if character is already holding a box
-	characterHasBox = true;
-	boxBeingHeld = obj_box5;
-	boxBeingHeld.image_alpha = .5;
-	// if character was facing right
-	if (sprite_index == spr_characterIdleR || 
-					sprite_index == spr_characterWalkingR)
-	{
-		sprite_index = spr_characterIdleBoxR
-	}
-	else
-	{
-		sprite_index = spr_characterIdleBoxL
-	}
-}
 
 // if character drops a box
 if (characterHasBox && keyboard_check_pressed(ord("X")))
@@ -130,10 +63,6 @@ if (characterHasBox && keyboard_check_pressed(ord("X")))
 		sprite_index = spr_characterIdleL
 	}
 }
-
-
-
-
 
 
 // if a player stops moving while facing left IDLE
