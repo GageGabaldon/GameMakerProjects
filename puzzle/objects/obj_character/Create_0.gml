@@ -15,3 +15,4 @@ allBoxesSize = array_length(allBoxes);
 characterHasBox = false;
 boxBeingHeld = noone;
 characterBoxDistance = 1;
+nearTruck = false;

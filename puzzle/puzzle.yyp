@@ -35,6 +35,7 @@
     {"id":{"name":"spr_characterIdleR","path":"sprites/spr_characterIdleR/spr_characterIdleR.yy",},"order":1,},
     {"id":{"name":"TGMS_8_SystemUtilities","path":"scripts/TGMS_8_SystemUtilities/TGMS_8_SystemUtilities.yy",},"order":11,},
     {"id":{"name":"TGMS_Documentation","path":"notes/TGMS_Documentation/TGMS_Documentation.yy",},"order":1,},
+    {"id":{"name":"obj_boxParent","path":"objects/obj_boxParent/obj_boxParent.yy",},"order":12,},
     {"id":{"name":"TGMS_4_TweenState","path":"scripts/TGMS_4_TweenState/TGMS_4_TweenState.yy",},"order":7,},
     {"id":{"name":"TGMS_Beta_Notes","path":"notes/TGMS_Beta_Notes/TGMS_Beta_Notes.yy",},"order":0,},
     {"id":{"name":"TGMS_X_Deprecated","path":"scripts/TGMS_X_Deprecated/TGMS_X_Deprecated.yy",},"order":13,},

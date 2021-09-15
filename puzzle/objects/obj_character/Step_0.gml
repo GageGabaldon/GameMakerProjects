@@ -1,3 +1,13 @@
+// if player near truck
+if (distance_to_object(obj_truckOpen) < 100)
+{
+	nearTruck = true;
+}
+else
+{
+	nearTruck = false;	
+}
+
 
 if (boxBeingHeld != noone)
 {
