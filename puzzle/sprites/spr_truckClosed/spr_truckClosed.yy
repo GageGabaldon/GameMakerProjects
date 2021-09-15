@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"LayerId":{"name":"1b34607b-99e1-4ba4-a056-4c6b12f81966","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"92467919-b9a9-4edd-9d85-8a4aad0fcfdf","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"92467919-b9a9-4edd-9d85-8a4aad0fcfdf","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"LayerId":{"name":"195ddf93-4847-4b7f-9531-af9e6f12a47b","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","name":"92467919-b9a9-4edd-9d85-8a4aad0fcfdf","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3eaf9f16-a892-461d-b5e4-5a6c265e9a66","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5d1d8ef-a4f5-4c6b-bbac-91c788334bca","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1dc837bc-92db-4b31-8925-b0a6c3c088e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"92467919-b9a9-4edd-9d85-8a4aad0fcfdf","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 115,
-    "yorigin": 55,
+    "xorigin": 230,
+    "yorigin": 110,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1b34607b-99e1-4ba4-a056-4c6b12f81966","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"195ddf93-4847-4b7f-9531-af9e6f12a47b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
