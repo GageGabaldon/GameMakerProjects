@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_box1",
-    "path": "sprites/spr_box1/spr_box1.yy",
+    "name": "spr_startButton",
+    "path": "sprites/spr_startButton/spr_startButton.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boxParent",
+  "name": "obj_startButton",
   "tags": [],
   "resourceType": "GMObject",
 }
