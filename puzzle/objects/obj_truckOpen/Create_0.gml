@@ -7,6 +7,7 @@ allBoxes = [obj_LBox1,
 			obj_squareBox1,
 			obj_TBox1, obj_TBox2, 
 			obj_ZBox1, obj_ZBox2];
+currentBoxes = [];
 
 allBoxesSize = array_length(allBoxes);
 //num boxes in truck
