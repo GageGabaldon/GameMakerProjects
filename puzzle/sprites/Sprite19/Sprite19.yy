@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 239,
-  "bbox_top": 13,
-  "bbox_bottom": 249,
+  "bbox_right": 1365,
+  "bbox_top": 0,
+  "bbox_bottom": 767,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 250,
-  "height": 250,
+  "width": 1366,
+  "height": 768,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"883601e0-6e7d-4d29-91b5-2a434cdf0de7","path":"sprites/spr_endGame/spr_endGame.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"883601e0-6e7d-4d29-91b5-2a434cdf0de7","path":"sprites/spr_endGame/spr_endGame.yy",},"LayerId":{"name":"318c128e-eee3-4e2b-a19d-7accc3b7cd2e","path":"sprites/spr_endGame/spr_endGame.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_endGame","path":"sprites/spr_endGame/spr_endGame.yy",},"resourceVersion":"1.0","name":"883601e0-6e7d-4d29-91b5-2a434cdf0de7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2ec41f7a-fae3-4a76-b19c-b5db55d3baed","path":"sprites/Sprite19/Sprite19.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2ec41f7a-fae3-4a76-b19c-b5db55d3baed","path":"sprites/Sprite19/Sprite19.yy",},"LayerId":{"name":"a4aa9e7f-418f-4c2e-879d-82de3ed3c4da","path":"sprites/Sprite19/Sprite19.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Sprite19","path":"sprites/Sprite19/Sprite19.yy",},"resourceVersion":"1.0","name":"2ec41f7a-fae3-4a76-b19c-b5db55d3baed","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_endGame","path":"sprites/spr_endGame/spr_endGame.yy",},
+    "spriteId": {"name":"Sprite19","path":"sprites/Sprite19/Sprite19.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"36cac252-5c2d-4897-a140-2e7ff1c51f32","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"883601e0-6e7d-4d29-91b5-2a434cdf0de7","path":"sprites/spr_endGame/spr_endGame.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9f8bb0ba-6358-4057-9f89-a305f24f1b90","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ec41f7a-fae3-4a76-b19c-b5db55d3baed","path":"sprites/Sprite19/Sprite19.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_endGame","path":"sprites/spr_endGame/spr_endGame.yy",},
+    "parent": {"name":"Sprite19","path":"sprites/Sprite19/Sprite19.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_endGame",
+    "name": "Sprite19",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"318c128e-eee3-4e2b-a19d-7accc3b7cd2e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a4aa9e7f-418f-4c2e-879d-82de3ed3c4da","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_endGame",
+  "name": "Sprite19",
   "tags": [],
   "resourceType": "GMSprite",
 }
