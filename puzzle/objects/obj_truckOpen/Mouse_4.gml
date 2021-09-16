@@ -1,6 +1,6 @@
 
 // if the truck collision has been clicked on
-hasBox = obj_character.characterHasBox;
+
 //nearTruck = obj_character.nearTruck;
 // if the character has a box to place
 //if(hasBox && nearTruck)
