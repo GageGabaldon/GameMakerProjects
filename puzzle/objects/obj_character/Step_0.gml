@@ -16,10 +16,12 @@ if (boxBeingHeld != noone)
 	if(keyboard_check_pressed(ord("E")))
 	{
 		boxBeingHeld.image_angle += 90;
+		boxBeingHeld.rotated = !boxBeingHeld.rotated;
 	}
 	else if(keyboard_check_pressed(ord("Q")))
 	{
 		boxBeingHeld.image_angle -= 90;
+		boxBeingHeld.rotated = !boxBeingHeld.rotated;
 	}
 }
 
