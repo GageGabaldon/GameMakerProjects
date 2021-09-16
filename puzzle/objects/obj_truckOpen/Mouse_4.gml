@@ -88,9 +88,5 @@
 //}
 
 // win condition
-if(numBoxes == winCondition)
-{
-	room_goto(rm_end);
-}
 
 

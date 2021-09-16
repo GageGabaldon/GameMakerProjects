@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// win condition
 if(numBoxes == winCondition)
 {
-	room_goto(rm_end);
+	self.win();
 }
 
 // check for click event 
-if(mouse_check_button_pressed(mb_left))
+if(mouse_check_button_pressed(mb_left) && obj_character.characterHasBox &&
+  numBoxes != winCondition)
 {	
 	// get character info
 	with(obj_character)
@@ -39,7 +41,7 @@ if(mouse_check_button_pressed(mb_left))
 		_x = _y;
 		_y = temp;
 		
-		// flip again for long box idk end me
+		// flip again for long box idk
 		if(object == obj_longBox1 || object == obj_longBox2 || object == obj_longBox3)
 		{
 			var temp = _x;
@@ -47,13 +49,13 @@ if(mouse_check_button_pressed(mb_left))
 			_y = temp;
 		}
 		
-
+		// get the sprite radius to compare to see if box within the clickable area
 		var sprite_x_radius = (_x / 2) - 10; 
 		var sprite_y_radius = (_y /2) - 10;
 		show_debug_message("x_radius" + string(sprite_x_radius));
 		show_debug_message("y_radius" + string(sprite_y_radius));
 		
-
+		
 		var inClickable = (mouse_x < 1241 && mouse_x > 954) && (mouse_y > 558 && mouse_y < 685);
 		var inBox = (mouse_x - sprite_x_radius < 1241 && mouse_x + sprite_x_radius > 954) && (mouse_y - sprite_y_radius > 558 && mouse_y + sprite_y_radius < 685);
 		show_debug_message("inside clickable" + string(inClickable));
@@ -68,7 +70,7 @@ if(mouse_check_button_pressed(mb_left))
 				object.y = mouse_y;
 				object.image_alpha = 1;
 				numBoxes += 1;
-				array_push(currentBoxes, object);
+				object.inTruck = true;
 				
 				// set character information
 				with(obj_character)
@@ -80,57 +82,39 @@ if(mouse_check_button_pressed(mb_left))
 			}	
 			else 
 			{
+				// check if the objects are colliding with each other
 				var notCollide = true;
 				
+				
+				// iterate through all possible objects
 				for(var index = 0; index < array_length(allBoxes); index += 1)
 				{
-					if(allBoxes[index] != object)
+					// check if the box being checked isnt the box being held
+					if(allBoxes[index].id != object.id)
 					{
-						if(position_meeting(mouse_x, mouse_y, allBoxes[index]))
+						// check if collision
+						if(object.boxCollide(mouse_x, mouse_y, allBoxes[index]))
 						{
 							notCollide = false;
-							show_debug_message(notCollide);
 						}
 					}
 				}
+				
+				// no collision
 				if(notCollide)
 				{
 					object.x = mouse_x;
 					object.y = mouse_y;
 					object.image_alpha = 1;
-					array_push(currentBoxes, object);
 					numBoxes += 1;
+					object.inTruck = true;
+					
 					with(obj_character) {
 						obj_character.characterHasBox = false;
 						obj_character.boxBeingHeld = noone;
 						obj_character.sprite_index = spr_characterIdleR;
 					}
 				}	
-			}
-		}
-	}
-	else 
-	{
-		if(!position_meeting(mouse_x, mouse_y, obj_boxParent))
-		{
-			for(var index = 0; index < array_length(currentBoxes); index += 1)
-			{
-				if(instance_exists(currentBoxes[index]))
-				{
-					var distance = point_direction(mouse_x, mouse_y, currentBoxes[index].x, currentBoxes[index].y);
-				
-					if(distance < 10)
-					{
-						boxBeingHeld = currentBoxes[index];
-						with(obj_character)
-						{
-							obj_character.characterHasBox = true;
-							obj_character.boxBeingHeld = boxBeingHeld;
-							obj_character.sprite_index = spr_characterIdleBoxR;
-						
-						}
-					}
-				}
 			}
 		}
 	}

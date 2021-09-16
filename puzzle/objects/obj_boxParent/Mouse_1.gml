@@ -1,8 +1,17 @@
+/// @description pick up code
+
+
+
 if (!obj_character.characterHasBox)
 {
 	if (distance_to_object(obj_character) < 40)
 	{
-		obj_truckOpen.numBoxes -= 1;
+		if(self.inTruck)
+		{
+			obj_truckOpen.numBoxes -= 1;
+			self.inTruck = false;
+			
+		}
 		obj_character.characterHasBox = true;
 		obj_character.boxBeingHeld = self;
 		obj_character.boxBeingHeld.image_alpha = .5;
