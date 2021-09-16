@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"obj_startButton","path":"objects/obj_startButton/obj_startButton.yy",},"order":14,},
+    {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},"order":28,},
     {"id":{"name":"spr_characterWalkingL","path":"sprites/spr_characterWalkingL/spr_characterWalkingL.yy",},"order":6,},
     {"id":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},"order":2,},
     {"id":{"name":"spr_tile_set","path":"sprites/spr_tile_set/spr_tile_set.yy",},"order":0,},
@@ -7,6 +9,7 @@
     {"id":{"name":"obj_squareBox1","path":"objects/obj_squareBox1/obj_squareBox1.yy",},"order":1,},
     {"id":{"name":"seq_moving_truck","path":"sequences/seq_moving_truck/seq_moving_truck.yy",},"order":0,},
     {"id":{"name":"spr_characterWalkingR","path":"sprites/spr_characterWalkingR/spr_characterWalkingR.yy",},"order":2,},
+    {"id":{"name":"spr_startButton","path":"sprites/spr_startButton/spr_startButton.yy",},"order":29,},
     {"id":{"name":"obj_ZBox1","path":"objects/obj_ZBox1/obj_ZBox1.yy",},"order":5,},
     {"id":{"name":"TGMS_Update_Log","path":"notes/TGMS_Update_Log/TGMS_Update_Log.yy",},"order":3,},
     {"id":{"name":"TGMS_3_EventCallbacks","path":"scripts/TGMS_3_EventCallbacks/TGMS_3_EventCallbacks.yy",},"order":6,},
@@ -20,6 +23,7 @@
     {"id":{"name":"obj_end","path":"objects/obj_end/obj_end.yy",},"order":13,},
     {"id":{"name":"TGMS_9_Settings","path":"scripts/TGMS_9_Settings/TGMS_9_Settings.yy",},"order":12,},
     {"id":{"name":"TGMS_2_EaseFunctions","path":"scripts/TGMS_2_EaseFunctions/TGMS_2_EaseFunctions.yy",},"order":5,},
+    {"id":{"name":"spr_titleScreen","path":"sprites/spr_titleScreen/spr_titleScreen.yy",},"order":27,},
     {"id":{"name":"spr_plane","path":"sprites/spr_plane/spr_plane.yy",},"order":25,},
     {"id":{"name":"spr_characterIdleBoxR","path":"sprites/spr_characterIdleBoxR/spr_characterIdleBoxR.yy",},"order":3,},
     {"id":{"name":"TGMS_6_TweenTools","path":"scripts/TGMS_6_TweenTools/TGMS_6_TweenTools.yy",},"order":9,},
@@ -70,9 +74,9 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_puzzle","path":"rooms/rm_puzzle/rm_puzzle.yy",},},
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
-    {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -104,7 +108,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"moving truck.aseprite","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.4.580",
+    "IDEVersion": "2.3.3.574",
   },
   "resourceVersion": "1.4",
   "name": "puzzle",
