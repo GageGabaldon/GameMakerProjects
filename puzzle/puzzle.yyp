@@ -10,7 +10,6 @@
     {"id":{"name":"obj_ZBox1","path":"objects/obj_ZBox1/obj_ZBox1.yy",},"order":5,},
     {"id":{"name":"TGMS_Update_Log","path":"notes/TGMS_Update_Log/TGMS_Update_Log.yy",},"order":3,},
     {"id":{"name":"TGMS_3_EventCallbacks","path":"scripts/TGMS_3_EventCallbacks/TGMS_3_EventCallbacks.yy",},"order":6,},
-    {"id":{"name":"Sprite19","path":"sprites/Sprite19/Sprite19.yy",},"order":27,},
     {"id":{"name":"obj_longBox3","path":"objects/obj_longBox3/obj_longBox3.yy",},"order":8,},
     {"id":{"name":"obj_truckClosed","path":"objects/obj_truckClosed/obj_truckClosed.yy",},"order":11,},
     {"id":{"name":"tile_puzzle","path":"tilesets/tile_puzzle/tile_puzzle.yy",},"order":0,},
@@ -33,7 +32,6 @@
     {"id":{"name":"spr_endGame","path":"sprites/spr_endGame/spr_endGame.yy",},"order":24,},
     {"id":{"name":"o_SharedTweener","path":"objects/o_SharedTweener/o_SharedTweener.yy",},"order":0,},
     {"id":{"name":"spr_truckClosed","path":"sprites/spr_truckClosed/spr_truckClosed.yy",},"order":23,},
-    {"id":{"name":"Sprite18","path":"sprites/Sprite18/Sprite18.yy",},"order":16,},
     {"id":{"name":"spr_characterIdleL","path":"sprites/spr_characterIdleL/spr_characterIdleL.yy",},"order":5,},
     {"id":{"name":"TGMS_7_Properties","path":"scripts/TGMS_7_Properties/TGMS_7_Properties.yy",},"order":10,},
     {"id":{"name":"spr_box1","path":"sprites/spr_box1/spr_box1.yy",},"order":19,},
@@ -73,8 +71,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
-    {"roomId":{"name":"rm_puzzle","path":"rooms/rm_puzzle/rm_puzzle.yy",},},
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"roomId":{"name":"rm_puzzle","path":"rooms/rm_puzzle/rm_puzzle.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -106,7 +104,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"moving truck.aseprite","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.3.574",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "puzzle",
