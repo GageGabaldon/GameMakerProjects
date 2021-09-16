@@ -3,7 +3,7 @@
     "name": "spr_box5",
     "path": "sprites/spr_box5/spr_box5.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
