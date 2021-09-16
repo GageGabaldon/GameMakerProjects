@@ -1,7 +1,7 @@
 {
   "spriteId": null,
   "timeUnits": 1,
-  "playback": 0,
+  "playback": 1,
   "playbackSpeed": 4.0,
   "playbackSpeedType": 0,
   "autoRecord": true,
