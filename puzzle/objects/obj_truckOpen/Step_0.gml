@@ -23,14 +23,14 @@ if(mouse_check_button_pressed(mb_left))
 		var _y = object.sprite_height;
 		var _x = object.sprite_width;
 	
-		var sprite_x_radius = (_x / 2); 
-		var sprite_y_radius = (_y /2);
+		var sprite_x_radius = (_x / 2) - 10; 
+		var sprite_y_radius = (_y /2) - 10;
 		show_debug_message("x_radius" + string(sprite_x_radius));
 		show_debug_message("y_radius" + string(sprite_y_radius));
 		
 
 		var inClickable = (mouse_x < 1241 && mouse_x > 954) && (mouse_y > 558 && mouse_y < 685);
-		var inBox = (mouse_x + sprite_x_radius < 1241 && mouse_x - sprite_x_radius > 954) && (mouse_y - sprite_y_radius > 558 && mouse_y + sprite_y_radius < 685);
+		var inBox = (mouse_x - sprite_x_radius < 1241 && mouse_x + sprite_x_radius > 954) && (mouse_y - sprite_y_radius > 558 && mouse_y + sprite_y_radius < 685);
 		show_debug_message("inside clickable" + string(inClickable));
 		show_debug_message("inside box" + string(inBox));
 		
