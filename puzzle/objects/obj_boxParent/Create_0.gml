@@ -2,6 +2,7 @@
 
 rotated = false;
 inTruck = false;
+placed = false;
 
 // function to 
 function boxCollide(x, y, obj)

@@ -26,7 +26,7 @@ if (boxBeingHeld != noone)
 }
 
 // if character tries to pick up a box
-if (!characterHasBox && keyboard_check_pressed(ord("F")))
+/*if (!characterHasBox && keyboard_check_pressed(ord("F")))
 {	
 	// find what box is within maximum distance and pick it up
 	for (i = 0; i < allBoxesSize; i++)
@@ -53,7 +53,7 @@ if (!characterHasBox && keyboard_check_pressed(ord("F")))
 		}
 	}
 
-}
+}*/
 
 
 // if character drops a box
