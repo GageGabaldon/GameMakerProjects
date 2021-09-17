@@ -24,34 +24,29 @@ if(mouse_check_button_pressed(mb_left) && obj_character.characterHasBox &&
 		var _y;
 		var _x;
 		
-		// flip again for long box idk
-		if(object == obj_longBox1 || object == obj_longBox2 || object == obj_longBox3)
+		// get sprite height and width and radius
+		if(object.rotated)
 		{
-			
-			if (object.rotated)
-			{
-				_x = object.sprite_height;
-				_y = object.sprite_width;
-			}
-			else
-			{
-				_x = object.sprite_width;
-				_y = object.sprite_height;
-			}
+			 _y = object.sprite_height;
+			 _x = object.sprite_width;
 		}
 		else
 		{
-			// get sprite height and width and radius
-			if(object.rotated)
-			{
-				 _x = object.sprite_width;
-				 _y = object.sprite_height;
-			}
-			else
-			{
-				 _x = object.sprite_height;
-				 _y = object.sprite_width;
-			}	
+			 _x = object.sprite_height;
+			 _y = object.sprite_width;
+		}
+		
+		// flip for some reason idk
+		var temp = _x;
+		_x = _y;
+		_y = temp;
+		
+		// flip again for long box idk
+		if(object.id == obj_longBox1.id || object.id == obj_longBox2.id || object.id == obj_longBox3.id)
+		{
+			var temp = _x;
+			_x = _y;
+			_y = temp;
 		}
 		
 		
@@ -63,7 +58,7 @@ if(mouse_check_button_pressed(mb_left) && obj_character.characterHasBox &&
 		
 		
 		var inClickable = (mouse_x < 1241 && mouse_x > 954) && (mouse_y > 558 && mouse_y < 685);
-		var inBox = (mouse_x - sprite_x_radius < 1241 && mouse_x + sprite_x_radius > 954) && (mouse_y - sprite_y_radius > 558 && mouse_y + sprite_y_radius < 685);
+		var inBox = (mouse_x + sprite_x_radius < 1241 && mouse_x - sprite_x_radius > 954) && (mouse_y - sprite_y_radius > 558 && mouse_y + sprite_y_radius < 685);
 		show_debug_message("inside clickable" + string(inClickable));
 		show_debug_message("inside box" + string(inBox));
 		
