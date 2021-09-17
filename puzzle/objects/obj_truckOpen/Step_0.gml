@@ -24,30 +24,36 @@ if(mouse_check_button_pressed(mb_left) && obj_character.characterHasBox &&
 		var _y;
 		var _x;
 		
-		// get sprite height and width and radius
-		if(object.rotated)
-		{
-			 _y = object.sprite_height;
-			 _x = object.sprite_width;
-		}
-		else
-		{
-			 _x = object.sprite_height;
-			 _y = object.sprite_width;
-		}
-		
-		// flip for some reason idk
-		var temp = _x;
-		_x = _y;
-		_y = temp;
-		
 		// flip again for long box idk
 		if(object == obj_longBox1 || object == obj_longBox2 || object == obj_longBox3)
 		{
-			var temp = _x;
-			_x = _y;
-			_y = temp;
+			
+			if (object.rotated)
+			{
+				_x = object.sprite_height;
+				_y = object.sprite_width;
+			}
+			else
+			{
+				_x = object.sprite_width;
+				_y = object.sprite_height;
+			}
 		}
+		else
+		{
+			// get sprite height and width and radius
+			if(object.rotated)
+			{
+				 _x = object.sprite_width;
+				 _y = object.sprite_height;
+			}
+			else
+			{
+				 _x = object.sprite_height;
+				 _y = object.sprite_width;
+			}	
+		}
+		
 		
 		// get the sprite radius to compare to see if box within the clickable area
 		var sprite_x_radius = (_x / 2) - 10; 
