@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_collision",
+    "path": "sprites/spr_collision/spr_collision.yy",
+  },
   "tileWidth": 16,
   "tileHeight": 16,
   "tilexoff": 0,
@@ -13,14 +16,19 @@
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
-  "out_columns": 0,
-  "tile_count": 0,
+  "out_columns": 2,
+  "tile_count": 4,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
   "tileAnimation": {
-    "FrameData": [],
-    "SerialiseFrameCount": 0,
+    "FrameData": [
+      0,
+      1,
+      2,
+      3,
+    ],
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
