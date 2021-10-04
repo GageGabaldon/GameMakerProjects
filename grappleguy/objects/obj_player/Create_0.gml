@@ -12,7 +12,12 @@ MyCamera = camera_get_active();
 jumpHeight = 30;
 grappleLimit = 150;
 walkSpeed = 25;
+checkBot = 1;
+checkSideRight = 0;
+checkSideLeft = 0;
+spriteradius = (sprite_width/2) - 2;
 image_speed = 0;
+grappingWall = false;
 
 m_rule(fsm, "jump", "standing", "falling");
 m_rule(fsm, "grappleWall", "standing", "wall");

@@ -1,4 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-y -= 150;
-m_send(fsm, "jump");
+
+if(!m_is_state(fsm, "falling"))
+{
+	if(!grappingWall)
+	{
+		y -= 150;
+		m_send(fsm, "jump");
+	}
+	else
+	{
+		y -=2;
+	}
+}
