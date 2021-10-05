@@ -16,11 +16,9 @@ if((checkBot + checkSideLeft + checkSideRight) == 0)
 		m_send(fsm, "falling");
 	}
 	grappingWall = false;
-	show_debug_message("falling");
 }
 else if(checkSideLeft > 0)
 {
-	show_debug_message("Left collide");
 	// change sprite
 	grappingWall = true;
 	m_send(fsm, "sticking");
@@ -28,7 +26,6 @@ else if(checkSideLeft > 0)
 }
 else if (checkSideRight > 0)
 {
-	show_debug_message("Right collide");
 	// change sprite
 	grappingWall = true;
 	m_send(fsm, "sticking");
@@ -81,23 +78,6 @@ if(keyboard_check(ord("W")))
 	}
 }
 
-if(keyboard_check(ord("F")))
-{
-	checkMouse = tilemap_get_at_pixel(collision, mouse_x, mouse_y);
-	if(checkMouse > 0)
-	{
-		distance = point_distance(self.x, self.y, mouse_x, mouse_y);
-		if(distance < grappleLimit)
-		{
-			// tween from position to poistion and change sprite
-		}
-		else 
-		{
-			// play miss animation
-		}
-	}
-
-}
 
 if(keyboard_check(ord("S")) && checkBot == 0)
 {
