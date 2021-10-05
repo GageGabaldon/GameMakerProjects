@@ -7,7 +7,7 @@
 MOVEMENT: "A" to move left, "D" to move right
 PICK UP BOX: "F" or RMB
 PUT DOWN BOX: "X"
-PLACE BOX IN 
+PLACE BOX IN TRUCK: LMB
 ROTATE BOX: "Q" to rotate left, "E" to rotate right
 
 The object of the game is to fit all 9 boxes into the moving truck without the boxes overlapping like a jigsaw puzzle. Players cannot hold multiple boxes, and must put down a box before picking up a new one. Boxes can be taken out of the truck using the RMB. The game is won when all boxes have been fit inside the truck.
