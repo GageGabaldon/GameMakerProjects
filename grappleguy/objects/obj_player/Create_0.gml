@@ -4,7 +4,7 @@
 fsm = m_create("stand");
 lastState = "stand";
 my_direction = "right";
-var background_lyr = layer_get_id("tile_background");
+var background_lyr = layer_get_id("tile_collision");
 var collision_lyr = tile_get_index(background_lyr);
 collision = layer_tilemap_get_id(collision_lyr);
 
