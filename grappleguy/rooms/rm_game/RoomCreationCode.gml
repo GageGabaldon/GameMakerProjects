@@ -2,8 +2,8 @@ view_enabled = true;
 view_visible[0] = true;
 view_xport[0] = 0;
 view_yport[0] = 0;
-view_wport[0] = 480;
-view_hport[0] = 260;
+view_wport[0] = 600;
+view_hport[0] = 300;
 
 with(obj_player)
 {
