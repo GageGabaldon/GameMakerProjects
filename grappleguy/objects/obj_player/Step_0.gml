@@ -36,11 +36,21 @@ else {
 	{
 		m_send(fsm, "standing");
 	}
+	if(my_direction == "right")
+	{
+		self.sprite_index = spr_player_right;
+	}
+	else 
+	{
+		self.sprite_index = spr_player_left;
+	}
 }
 
 
 if(keyboard_check(ord("A")))
 {
+	self.sprite_index = spr_player_walk_left;
+	my_direction = "left";
 	if(checkSideLeft == 0)
 	{
 		x -= 2; // decrease to go left
@@ -50,6 +60,8 @@ if(keyboard_check(ord("A")))
 }
 if(keyboard_check(ord("D")))
 {
+	self.sprite_index = spr_player_walk_right;
+	my_direction = "right";
 	if(checkSideRight == 0)
 	{
 		x += 2; // decrease to go left
