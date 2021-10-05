@@ -66,7 +66,6 @@
     {"id":{"name":"__background_colour","path":"scripts/__background_colour/__background_colour.yy",},"order":0,},
     {"id":{"name":"TweenEventClear","path":"scripts/TweenEventClear/TweenEventClear.yy",},"order":2,},
     {"id":{"name":"__vspeed","path":"scripts/__vspeed/__vspeed.yy",},"order":8,},
-    {"id":{"name":"Sprite8","path":"sprites/Sprite8/Sprite8.yy",},"order":16,},
     {"id":{"name":"EaseLinear","path":"scripts/EaseLinear/EaseLinear.yy",},"order":20,},
     {"id":{"name":"TGMS_EventUser","path":"scripts/TGMS_EventUser/TGMS_EventUser.yy",},"order":2,},
     {"id":{"name":"TweenFinishDelay","path":"scripts/TweenFinishDelay/TweenFinishDelay.yy",},"order":1,},
