@@ -8,7 +8,7 @@ if(checkMouse > 0)
 	if(distance < grappleLimit)
 	{
 			// tween from position to poistion and change sprite
-			//TweenEasyMove(x, y, mouse_x, mouse_y, 2, 5, EaseInBounce);
+			TweenEasyMove(x, y, mouse_x, mouse_y, 3, 10, EaseInBounce);
 	}
 	else 
 	{

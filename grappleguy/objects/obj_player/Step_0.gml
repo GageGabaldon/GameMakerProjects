@@ -63,7 +63,7 @@ if(keyboard_check(vk_space))
 	{
 		if(!grappingWall)
 		{
-			y -= jumpHeight;
+			TweenEasyMove(x, y, x, y - jumpHeight, 0, 10, EaseOutElastic);
 			m_send(fsm, "falling");
 		}
 	}
