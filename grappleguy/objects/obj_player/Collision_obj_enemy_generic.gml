@@ -9,3 +9,5 @@ if(my_direction == "right")
 else {
 	sprite_index = spr_hurt_left;
 }
+
+room_goto(rm_lose);

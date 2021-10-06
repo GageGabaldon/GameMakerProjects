@@ -7,14 +7,6 @@ checkSideLeft += tilemap_get_at_pixel(collision, x - spriteradius, y - spriterad
 checkSideRight = tilemap_get_at_pixel(collision, x + spriteradius, y + spriteradius);
 checkSideRight += tilemap_get_at_pixel(collision, x + spriteradius, y - spriteradius);
 
-if(layer_sequence_exists("tile_background_assets", seq_endgame))
-{
-	if(!sequence_exists(seq_endgame))
-	{
-		room_goto(rm_win);
-	}
-}
-
 if(wait >= 150)
 {
 	self.image_alpha = 1;
@@ -119,17 +111,33 @@ if(keyboard_check(ord("S")) && checkBot == 0)
 	y+=2;
 }
 
-if(mouse_check_button_released(mb_left))
+if(mouse_check_button_pressed(mb_left))
 {
 	checkMouse = tilemap_get_at_pixel(collision, mouse_x, mouse_y);
+	show_debug_message(checkMouse);
+	mx = mouse_x;
+	my = mouse_y;
+	xMath = mouse_x % 32;
+	yMath = mouse_y % 32;
+	
 		
 	if(checkMouse > 0)
 	{
+		active = true;
 		distance = point_distance(self.x, self.y, mouse_x, mouse_y);
 		if(distance < grappleLimit)
 		{
+			if(my_direction = "right")
+			{
+				sprite_index = spr_grapple_right;
+			}
+			else
+			{
+				sprite_index = spr_grapple_left;
+			}
+			
 			// tween from position to poistion and change sprite
-			TweenEasyMove(x, y, mouse_x, mouse_y, 3, 10, EaseInBounce);
+			TweenEasyMove(x, y, mouse_x, mouse_y, 0, 13, EaseInBounce);
 		}
 		else 
 		{
@@ -156,7 +164,7 @@ if (place_meeting(x, y, obj_enemy))
 */
 /*if (place_free(x,y+1)) gravity = 1;
 else gravity = 0;*/
-
+/**
 if (mouse_check_button_pressed(mb_left))
 {
 	mx = mouse_x;
@@ -173,7 +181,7 @@ if (active)
 	y+= (my-y)* 0.1;
 	
 }
-
+*/
 
 if (mouse_check_button_released(mb_left))
 {

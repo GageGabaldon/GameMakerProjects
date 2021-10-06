@@ -28,8 +28,9 @@ grappingWall = false;
 wait = false;
 hurt = false;
 hurtCounter = 0;
+xMath = 0;
+yMath = 0;
 hurtImmunity = 120;
-
 
 m_rule(fsm, "standing", "fall", "stand");
 m_rule(fsm, "standing", "wall", "stand");
