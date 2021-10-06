@@ -86,3 +86,8 @@ m_action(fsm, ">grappleMiss", function() {
 		
 });
 */
+
+//grapple hook varialbes
+mx = x;
+my = y;
+active = false;
