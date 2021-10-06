@@ -114,3 +114,21 @@ if(mouse_check_button_released(mb_left))
 		}
 	}
 }
+
+// if we collide with an enemy
+// TO DO: trigger die title, do not allow movement
+if (place_meeting(x, y, obj_enemy))
+{
+	if (my_direction == "left")
+	{
+		spr_index = spr_playerhurt_left;
+	}
+	else
+	{
+		spr_index = spr_playerhurt_right;	
+	}
+	
+	
+	
+	
+}
