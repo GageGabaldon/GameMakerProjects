@@ -11,8 +11,9 @@ collision = layer_tilemap_get_id(collision_lyr);
 // collecting hamsters
 numHamsters = 0;
 dead = false;
-
-jumpHeight = 65;
+image_alpha = 0.1;
+wait = 0;
+jumpHeight = 60;
 grappleLimit = 250;
 walkSpeed = 25;
 checkBot = 1;
@@ -25,6 +26,9 @@ spriteradius = (sprite_width/2) - 2;
 image_speed = 0;
 grappingWall = false;
 wait = false;
+hurt = false;
+hurtCounter = 0;
+hurtImmunity = 120;
 
 
 m_rule(fsm, "standing", "fall", "stand");

@@ -7,6 +7,21 @@ checkSideLeft += tilemap_get_at_pixel(collision, x - spriteradius, y - spriterad
 checkSideRight = tilemap_get_at_pixel(collision, x + spriteradius, y + spriteradius);
 checkSideRight += tilemap_get_at_pixel(collision, x + spriteradius, y - spriteradius);
 
+if(layer_sequence_exists("tile_background_assets", seq_endgame))
+{
+	if(!sequence_exists(seq_endgame))
+	{
+		room_goto(rm_win);
+	}
+}
+
+if(wait >= 150)
+{
+	self.image_alpha = 1;
+}
+else{
+	wait += 1;
+}
 // check if falling
 if((checkBot + checkSideLeft + checkSideRight) == 0)
 {
@@ -53,7 +68,6 @@ else {
 		self.sprite_index = spr_player_left;
 	}
 }
-
 
 if(keyboard_check(ord("A")))
 {
@@ -124,6 +138,7 @@ if(mouse_check_button_released(mb_left))
 	}
 }
 
+/**
 // if we collide with an enemy
 // TO DO: trigger die title, do not allow movement
 if (place_meeting(x, y, obj_enemy))
@@ -138,26 +153,4 @@ if (place_meeting(x, y, obj_enemy))
 		spr_index = spr_playerhurt_right;	
 	}
 }
-
-// if we collide with a hamster
-if (place_meeting(x, y, obj_hamster))
-{
-	numHamsters += 1;
-	instance_destroy(other); // remove colliding hamster object
-}
-
-// if collide with lazers 
-// TO DO: trigger die title, do not allow movement
-if (tilemap_get_at_pixel(tile_lazers, x, y)) // may be slightly off from x and y
-{
-	dead = true;
-	if (my_direction == "left")
-	{
-		spr_index = spr_playerhurt_left;
-	}
-	else
-	{
-		spr_index = spr_playerhurt_right;	
-	}
-}
-	
+*/

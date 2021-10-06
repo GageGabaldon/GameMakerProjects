@@ -1,9 +1,9 @@
 {
   "spriteId": {
-    "name": "spr_hamster_sad",
-    "path": "sprites/spr_hamster_sad/spr_hamster_sad.yy",
+    "name": "spr_ufo",
+    "path": "sprites/spr_ufo/spr_ufo.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_hamster",
+  "name": "obj_ufo",
   "tags": [],
   "resourceType": "GMObject",
 }
