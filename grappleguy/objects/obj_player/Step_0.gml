@@ -10,7 +10,15 @@ checkSideRight += tilemap_get_at_pixel(collision, x + spriteradius, y - spritera
 // check if falling
 if((checkBot + checkSideLeft + checkSideRight) == 0)
 {
-	y += 3;
+	if(wait > 20)
+	{
+		y += 2;
+	}
+	else
+	{
+		wait += 1;
+	}
+	
 	if(!m_is_state(fsm, "fall"))
 	{
 		m_send(fsm, "falling");
@@ -75,8 +83,9 @@ if(keyboard_check(vk_space))
 	{
 		if(!grappingWall)
 		{
-			TweenEasyMove(x, y, x, y - jumpHeight, 0, 10, EaseOutElastic);
+			TweenEasyMove(x, y, x, y - jumpHeight, 0, 15, EaseOutSine);
 			m_send(fsm, "falling");
+			wait = 0;
 		}
 	}
 }

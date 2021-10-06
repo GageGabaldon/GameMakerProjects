@@ -12,7 +12,7 @@ collision = layer_tilemap_get_id(collision_lyr);
 numHamsters = 0;
 dead = false;
 
-jumpHeight = 150;
+jumpHeight = 65;
 grappleLimit = 250;
 walkSpeed = 25;
 checkBot = 1;
@@ -24,6 +24,7 @@ spriteBotRadius = (sprite_height / 2) + 3;
 spriteradius = (sprite_width/2) - 2;
 image_speed = 0;
 grappingWall = false;
+wait = false;
 
 
 m_rule(fsm, "standing", "fall", "stand");
