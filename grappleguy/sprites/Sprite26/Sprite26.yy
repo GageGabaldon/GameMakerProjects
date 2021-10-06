@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 64,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"15a83bd0-d1b8-49fc-a900-20ffc222613f","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"15a83bd0-d1b8-49fc-a900-20ffc222613f","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},"LayerId":{"name":"77ec528f-4053-4b9c-86c5-dc61086d58c4","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_flying_enemy","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},"resourceVersion":"1.0","name":"15a83bd0-d1b8-49fc-a900-20ffc222613f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7e42265c-3b72-4ef6-b775-27036e280651","path":"sprites/Sprite26/Sprite26.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7e42265c-3b72-4ef6-b775-27036e280651","path":"sprites/Sprite26/Sprite26.yy",},"LayerId":{"name":"6f133757-5197-4fc5-9fee-5fa9e5a3934b","path":"sprites/Sprite26/Sprite26.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Sprite26","path":"sprites/Sprite26/Sprite26.yy",},"resourceVersion":"1.0","name":"7e42265c-3b72-4ef6-b775-27036e280651","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_flying_enemy","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},
+    "spriteId": {"name":"Sprite26","path":"sprites/Sprite26/Sprite26.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"332f3f8e-7fe1-47dc-9599-fa8ac5791422","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"15a83bd0-d1b8-49fc-a900-20ffc222613f","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d1c9bc25-5307-4629-ba1d-7f1298298e24","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e42265c-3b72-4ef6-b775-27036e280651","path":"sprites/Sprite26/Sprite26.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_flying_enemy","path":"sprites/spr_flying_enemy/spr_flying_enemy.yy",},
+    "parent": {"name":"Sprite26","path":"sprites/Sprite26/Sprite26.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_flying_enemy",
+    "name": "Sprite26",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"77ec528f-4053-4b9c-86c5-dc61086d58c4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6f133757-5197-4fc5-9fee-5fa9e5a3934b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "grappleguy",
+    "path": "grappleguy.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "spr_flying_enemy",
+  "name": "Sprite26",
   "tags": [],
   "resourceType": "GMSprite",
 }

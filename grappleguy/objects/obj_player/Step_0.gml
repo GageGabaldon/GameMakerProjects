@@ -154,3 +154,28 @@ if (place_meeting(x, y, obj_enemy))
 	}
 }
 */
+/*if (place_free(x,y+1)) gravity = 1;
+else gravity = 0;*/
+
+if (mouse_check_button_pressed(mb_left))
+{
+	mx = mouse_x;
+	my = mouse_y;
+	if(place_meeting(mx,my,obj_grappleable_block))
+	{
+		active = true;
+	}
+}
+
+if (active)
+{
+	x+= (mx-x) *0.1;
+	y+= (my-y)* 0.1;
+	
+}
+
+
+if (mouse_check_button_released(mb_left))
+{
+	active = false;
+}
