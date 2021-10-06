@@ -8,6 +8,9 @@ var background_lyr = layer_get_id("tile_collision");
 var collision_lyr = tile_get_index(background_lyr);
 collision = layer_tilemap_get_id(collision_lyr);
 
+// collecting hamsters
+numHamsters = 0;
+
 jumpHeight = 150;
 grappleLimit = 250;
 walkSpeed = 25;

@@ -119,6 +119,7 @@ if(mouse_check_button_released(mb_left))
 // TO DO: trigger die title, do not allow movement
 if (place_meeting(x, y, obj_enemy))
 {
+	dead = true;
 	if (my_direction == "left")
 	{
 		spr_index = spr_playerhurt_left;
@@ -127,8 +128,27 @@ if (place_meeting(x, y, obj_enemy))
 	{
 		spr_index = spr_playerhurt_right;	
 	}
-	
-	
-	
-	
 }
+
+// if we collide with a hamster
+if (place_meeting(x, y, obj_hamster))
+{
+	numHamsters += 1;
+	instance_destroy(other);
+}
+
+// if collide with lazers 
+// TO DO: trigger die title, do not allow movement
+if (tilemap_get_at_pixel(tile_lazers, x, y))
+{
+	dead = true;
+	if (my_direction == "left")
+	{
+		spr_index = spr_playerhurt_left;
+	}
+	else
+	{
+		spr_index = spr_playerhurt_right;	
+	}
+}
+	
