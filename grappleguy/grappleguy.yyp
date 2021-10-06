@@ -15,6 +15,7 @@
     {"id":{"name":"spr_hamster_sad","path":"sprites/spr_hamster_sad/spr_hamster_sad.yy",},"order":19,},
     {"id":{"name":"TweenMoreScript","path":"scripts/TweenMoreScript/TweenMoreScript.yy",},"order":0,},
     {"id":{"name":"__y","path":"scripts/__y/__y.yy",},"order":10,},
+    {"id":{"name":"Sprite29","path":"sprites/Sprite29/Sprite29.yy",},"order":19,},
     {"id":{"name":"__image_blend","path":"scripts/__image_blend/__image_blend.yy",},"order":4,},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"order":5,},
     {"id":{"name":"TGMS_UserMacros","path":"scripts/TGMS_UserMacros/TGMS_UserMacros.yy",},"order":7,},
