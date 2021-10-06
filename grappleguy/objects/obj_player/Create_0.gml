@@ -10,6 +10,7 @@ collision = layer_tilemap_get_id(collision_lyr);
 
 // collecting hamsters
 numHamsters = 0;
+dead = false;
 
 jumpHeight = 150;
 grappleLimit = 250;

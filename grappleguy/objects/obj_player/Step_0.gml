@@ -134,12 +134,12 @@ if (place_meeting(x, y, obj_enemy))
 if (place_meeting(x, y, obj_hamster))
 {
 	numHamsters += 1;
-	instance_destroy(other);
+	instance_destroy(other); // remove colliding hamster object
 }
 
 // if collide with lazers 
 // TO DO: trigger die title, do not allow movement
-if (tilemap_get_at_pixel(tile_lazers, x, y))
+if (tilemap_get_at_pixel(tile_lazers, x, y)) // may be slightly off from x and y
 {
 	dead = true;
 	if (my_direction == "left")
