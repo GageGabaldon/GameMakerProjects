@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "button_start",
+  "name": "obj_startbutton",
   "tags": [],
   "resourceType": "GMObject",
 }
