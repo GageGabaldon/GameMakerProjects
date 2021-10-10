@@ -8,7 +8,7 @@ checkSideRight = tilemap_get_at_pixel(collision, x + spriteradius, y + spriterad
 checkSideRight += tilemap_get_at_pixel(collision, x + spriteradius, y - spriteradius);
 checkSideUp = tilemap_get_at_pixel(collision, x, y - spriteBotRadius);
 
-if(wait >= 90)
+if(wait >= waitLimit)
 {
 	self.image_alpha = 1;
 }
@@ -83,7 +83,7 @@ if(keyboard_check(ord("A")))
 	}
 	
 	my_direction = "left";
-	if(checkSideLeft == 0 && grappleMovement > -grappleMovementLimit && wait >= 90)
+	if(checkSideLeft == 0 && grappleMovement > -grappleMovementLimit && wait >= waitLimit)
 	{
 		if(m_is_state(fsm, "grapple"))
 		{
@@ -106,7 +106,7 @@ if(keyboard_check(ord("D")))
 	}
 
 	my_direction = "right";
-	if(checkSideRight == 0 && grappleMovement < grappleMovementLimit && wait >= 90)
+	if(checkSideRight == 0 && grappleMovement < grappleMovementLimit && wait >= waitLimit)
 	{
 		if(m_is_state(fsm, "grapple"))
 		{
@@ -126,7 +126,6 @@ if(keyboard_check(vk_space))
 		{
 			TweenEasyMove(x, y, x, y - jumpHeight, 0, 10, EaseOutSine);
 			m_send(fsm, "falling");
-			wait = 0;
 		}
 	}
 }
@@ -180,6 +179,10 @@ if(mouse_check_button_pressed(mb_left))
 			while(collide == 0)
 			{
 				linemarch += 1;
+				if(linemarch > grappleLimit)
+				{
+					break;
+				}
 				notCollide_x = x + lengthdir_x(linemarch, angle);
 				notCollide_y = y + lengthdir_y(linemarch, angle);
 				

@@ -12,6 +12,7 @@ collision = layer_tilemap_get_id(collision_lyr);
 numHamsters = 0;
 image_alpha = 0;
 wait = 0;
+waitLimit = 150;
 jumpHeight = 60;
 grappleLimit = 250;
 walkSpeed = 25;
@@ -28,7 +29,6 @@ spriteBotRadius = (sprite_height / 2) + 3;
 spriteradius = (sprite_width/2) - 2;
 image_speed = 0;
 grappingWall = false;
-wait = false;
 grappleMovement = 0;
 grappleMovementLimit = 40;
 
