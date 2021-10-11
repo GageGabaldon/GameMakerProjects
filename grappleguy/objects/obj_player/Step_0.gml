@@ -179,7 +179,7 @@ if(mouse_check_button_pressed(mb_left))
 			while(collide == 0)
 			{
 				linemarch += 1;
-				if(linemarch > grappleLimit)
+				if(linemarch > grappleLimit )
 				{
 					break;
 				}
