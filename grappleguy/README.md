@@ -1,5 +1,6 @@
-# Project 2
-## Area 52 Part Two
+# Project 2 - Tilesets
+
+## Alien
 * Ashleea Holloway (amh999)
 * Stefan Mihailovic (sm3377)
 * Gage Gabaldon (gag252)
@@ -24,8 +25,5 @@ corners of blocks a little funky.
 Created Path AI For guards, Created Failed Room, Created Fonts.
 * Stefan Mihailovic: Created Main Level Design, Created Start Screen and End Screen,
  Helped with grapple code.
-* Gage Gabaldon: Helped Create Guards Sprites, Created Main Player code and logic
+* Gage Gabaldon: Helped Create Guards Sprites, Created Main Player code and logic,
 Created Start Sequence, Created End Sequence, Created Hamster Sequence, Helped with grapple Code.
-
-
- 
