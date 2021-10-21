@@ -3,7 +3,7 @@
     "name": "spr_line_normal",
     "path": "sprites/spr_line_normal/spr_line_normal.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

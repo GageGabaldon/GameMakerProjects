@@ -11,6 +11,8 @@ enemy_goal = layer_tilemap_get_id(goal_enemy_lyr);
 
 speed = -2;
 direction = 180;
+safe_bounce = 2;
+safe = 0;
 start = 
 {
 	cx: x,
@@ -31,13 +33,18 @@ function increaseSpeed(numSpeed)
 
 function bounce(cx, cy)
 {
+
 	direction = point_direction(x, y, cx, cy);	
 	speed = -speed;
+	
+	safe = 0;
 }
 
 function genericBounce()
 {
 	speed = -speed;
+	
+	safe = 0;
 }
 
 function bounceWall() 

@@ -3,7 +3,7 @@
     "name": "spr_ball_normal",
     "path": "sprites/spr_ball_normal/spr_ball_normal.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

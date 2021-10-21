@@ -1,11 +1,13 @@
 {
   "resources": [
+    {"id":{"name":"fnt_score","path":"fonts/fnt_score/fnt_score.yy",},"order":0,},
     {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},"order":0,},
     {"id":{"name":"spr_ball_goal","path":"sprites/spr_ball_goal/spr_ball_goal.yy",},"order":4,},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},"order":3,},
     {"id":{"name":"obj_player_line","path":"objects/obj_player_line/obj_player_line.yy",},"order":1,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":5,},
     {"id":{"name":"spr_enemy_goal","path":"sprites/spr_enemy_goal/spr_enemy_goal.yy",},"order":6,},
+    {"id":{"name":"snd_score","path":"sounds/snd_score/snd_score.yy",},"order":1,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":4,},
     {"id":{"name":"tile_enemy_goal","path":"tilesets/tile_enemy_goal/tile_enemy_goal.yy",},"order":3,},
     {"id":{"name":"obj_enemy_line","path":"objects/obj_enemy_line/obj_enemy_line.yy",},"order":2,},
@@ -13,6 +15,7 @@
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":5,},
     {"id":{"name":"spr_line_normal","path":"sprites/spr_line_normal/spr_line_normal.yy",},"order":1,},
     {"id":{"name":"tile_collision","path":"tilesets/tile_collision/tile_collision.yy",},"order":1,},
+    {"id":{"name":"snd_phase1","path":"sounds/snd_phase1/snd_phase1.yy",},"order":2,},
     {"id":{"name":"tile_goal","path":"tilesets/tile_goal/tile_goal.yy",},"order":2,},
     {"id":{"name":"tile_background","path":"tilesets/tile_background/tile_background.yy",},"order":0,},
     {"id":{"name":"spr_ball_normal","path":"sprites/spr_ball_normal/spr_ball_normal.yy",},"order":0,},
