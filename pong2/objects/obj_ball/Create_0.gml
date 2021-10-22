@@ -11,8 +11,11 @@ enemy_goal = layer_tilemap_get_id(goal_enemy_lyr);
 
 speed = -2;
 direction = 180;
-safe_bounce = 2;
+safeBounce = 2;
 safe = 0;
+wall1 = false;
+wall2 = false;
+
 start = 
 {
 	cx: x,
@@ -33,19 +36,31 @@ function increaseSpeed(numSpeed)
 
 function bounce(cx, cy)
 {
-	audio_play_sound(snd_paddle_collision, 2, 0);
-	direction = point_direction(x, y, cx, cy);	
-	speed = -speed;
-	
-	safe = 0;
+	if(safe > safeBounce)
+	{
+		audio_play_sound(snd_paddle_collision, 2, 0);
+		direction = point_direction(x, y, cx, cy);	
+		speed = -speed;
+		safe = 0;
+	}
 }
 
 function genericBounce()
 {
-	audio_play_sound(snd_paddle_collision, 2, 0);
-	speed = -speed;
-	
-	safe = 0;
+	if(safe > safeBounce)
+	{
+		audio_play_sound(snd_paddle_collision, 2, 0);
+		speed = -speed;
+		safe = 0;
+	}
+}
+
+function reset()
+{
+	speed = -2;
+	direction = 180;
+	x = start.cx;
+	y = start.cy;
 }
 
 function bounceWall() 

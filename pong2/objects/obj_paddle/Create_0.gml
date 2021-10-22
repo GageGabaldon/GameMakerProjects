@@ -9,8 +9,16 @@ spriteradius = sprite_height / 2;
 movementSpeed = 2;
 goal_point = 0;
 is_collision = false;
-temp1 = self.x - (sprite_width / 2);
-temp2 = self.y - (sprite_height / 2);
+
+topBuffered = self.y - (sprite_height / 2);
+botBuffered = self.y + (sprite_height / 2);
+rightBuffered = self.x + ((sprite_width / 2) / 4);
+leftBuffered = self.x - ((sprite_width / 2) / 4);
+
+temp1 = 0;
+temp2 = 0;
+buffer = 1;
+pointArraySize = 6;
 
 leftTopCorner = 
 {
@@ -20,9 +28,6 @@ leftTopCorner =
 	yfunc: "-"
 };
 
-temp1 = self.x + (sprite_width / 2);
-temp2 = self.y - (sprite_height / 2);
-
 rightTopCorner = 
 {
 	cx : temp1,
@@ -30,10 +35,6 @@ rightTopCorner =
 	xfunc: "+",
 	yfunc: "-"
 };
-
-temp1 = self.x - (sprite_width / 2);
-temp2 = self.y + (sprite_height / 2);
-
 
 leftBotCorner = 
 {
@@ -43,9 +44,6 @@ leftBotCorner =
 	yfunc: "+"
 };
 
-temp1 = self.x + (sprite_width / 2);
-temp2 = self.y + (sprite_height / 2);
-
 rightBotCorner = 
 {
 	cx : temp1,
@@ -53,27 +51,47 @@ rightBotCorner =
 	xfunc: "+",
 	yfunc: "+"
 };
+top =
+{
+	cx : temp1,
+	cy : temp2,
+	xfunc: "o",
+	yfunc: "-"
+};
+bot =
+{
+	cx : temp1,
+	cy : temp2,
+	xfunc: "o",
+	yfunc: "+"
+};
 
 points = [leftTopCorner, 
 		  leftBotCorner, 
 		  rightTopCorner, 
-		  rightBotCorner]
+		  rightBotCorner,
+		  top,
+		  bot]
 
 function calculatePoint(xycord, special)
 {
+	topBuffered = self.y - (sprite_height / 2);
+	botBuffered = self.y + (sprite_height / 2);
+	rightBuffered = self.x + ((sprite_width / 2) / 4);
+	leftBuffered = self.x - ((sprite_width / 2) / 4);
 	if(xycord == "X")
 	{
 		if(special == "+")
 		{
-			return x + (sprite_width / 2);
+			return rightBuffered + buffer;
 		}
 		else if (special == "-")
 		{
-			return x - (sprite_width / 2);
+			return leftBuffered + buffer;
 		}
 		else 
 		{
-			return x;
+			return x + buffer;
 		}
 	
 	}
@@ -81,22 +99,22 @@ function calculatePoint(xycord, special)
 	{
 		if(special == "+")
 		{
-			return y + (sprite_height / 2);
+			return botBuffered + buffer;
 		}
 		else if (special == "-")
 		{
-			return y - (sprite_height / 2);
+			return topBuffered + buffer;
 		}
 		else 
 		{
-			return y;
+			return y + buffer;
 		}
 	}
 }
 
 function updatePoints()
 {
-	for(var i = 0; i < 4; i++)
+	for(var i = 0; i < pointArraySize; i++)
 	{
 		points[i].cx = calculatePoint("X", points[i].xfunc);
 		points[i].cy = calculatePoint("Y", points[i].yfunc);
@@ -106,7 +124,7 @@ function updatePoints()
 // checks the corners 
 function checkCorners() 
 {
-	for(var i = 0; i < 4; i++)
+	for(var i = 0; i < pointArraySize; i++)
 	{
 		if(collision_point(points[i].cx, points[i].cy, obj_ball, true, true))
 		{
@@ -133,10 +151,11 @@ function checkCollisions()
 	}
 	else 
 	{
-		var inst = collision_rectangle(x - (sprite_width / 2), 
-		y - (sprite_height / 2), 
-		x + (sprite_width / 2), 
-		y + (sprite_height / 2), obj_ball, true, true);
+		var inst = collision_rectangle(self.x - ((sprite_width / 2) / 4), 
+		self.y - (sprite_height / 2), 
+		self.x + ((sprite_width / 2) / 4), 
+		self.y + (sprite_height / 2), 
+		obj_ball, true, true);
 			
 		if(inst != noone)
 		{
