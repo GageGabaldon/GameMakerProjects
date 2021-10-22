@@ -15,6 +15,7 @@ safeBounce = 2;
 safe = 0;
 wall1 = false;
 wall2 = false;
+gamePhase = 0;
 
 start = 
 {
@@ -36,6 +37,10 @@ function increaseSpeed(numSpeed)
 
 function bounce(cx, cy)
 {
+	if(gamePhase == 1)
+	{
+		image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
+	}
 	if(safe > safeBounce)
 	{
 		audio_play_sound(snd_paddle_collision, 2, 0);
@@ -47,12 +52,17 @@ function bounce(cx, cy)
 
 function genericBounce()
 {
+	if(gamePhase == 1)
+	{
+		image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
+	}
 	if(safe > safeBounce)
 	{
 		audio_play_sound(snd_paddle_collision, 2, 0);
 		speed = -speed;
 		safe = 0;
 	}
+	
 }
 
 function reset()
@@ -61,9 +71,34 @@ function reset()
 	direction = 180;
 	x = start.cx;
 	y = start.cy;
+	if(gamePhase == 1)
+	{
+		speed = -3;
+	}
+}
+
+function changeSpeed(spd)
+{
+	if(speed < 0)
+	{
+		speed = -spd;
+	}
+	else 
+	{
+		speed = spd;
+	}
 }
 
 function bounceWall() 
 {
+	show_debug_message(direction);
 	direction = -direction;
+	if(direction < 60)
+	{
+		direction += 1;
+	}
+	else if(direction > 300)
+	{
+		direction -= 1;
+	}
 }
