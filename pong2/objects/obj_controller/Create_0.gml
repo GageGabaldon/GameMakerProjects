@@ -10,6 +10,9 @@ player = 0;
 gamePhase = 0;
 gameWin = false;
 done = false;
+done2 = false;
+done3 = false;
+done4 = false;
 
 draw_set_font(fnt_score);
 

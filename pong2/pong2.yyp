@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"snd_paddle_collision","path":"sounds/snd_paddle_collision/snd_paddle_collision.yy",},"order":3,},
     {"id":{"name":"fnt_score","path":"fonts/fnt_score/fnt_score.yy",},"order":0,},
     {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},"order":0,},
     {"id":{"name":"spr_ball_goal","path":"sprites/spr_ball_goal/spr_ball_goal.yy",},"order":4,},

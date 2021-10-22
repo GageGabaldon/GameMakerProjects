@@ -33,7 +33,7 @@ function increaseSpeed(numSpeed)
 
 function bounce(cx, cy)
 {
-
+	audio_play_sound(snd_paddle_collision, 2, 0);
 	direction = point_direction(x, y, cx, cy);	
 	speed = -speed;
 	
@@ -42,6 +42,7 @@ function bounce(cx, cy)
 
 function genericBounce()
 {
+	audio_play_sound(snd_paddle_collision, 2, 0);
 	speed = -speed;
 	
 	safe = 0;

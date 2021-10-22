@@ -1,23 +1,23 @@
 {
   "compression": 0,
-  "volume": 0.84,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 1,
+  "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_phase1.wav",
-  "duration": 2.089796,
+  "soundFile": "snd_paddle_collision.wav",
+  "duration": 0.650159,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_phase1",
+  "name": "snd_paddle_collision",
   "tags": [],
   "resourceType": "GMSound",
 }

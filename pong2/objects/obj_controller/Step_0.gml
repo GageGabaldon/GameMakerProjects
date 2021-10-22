@@ -6,8 +6,9 @@ if(player == 2 && !done)
 	audio_play_sound(snd_phase1, 3, true);
 	done = true;
 }
-else if(player == 4)
+else if(player == 4 && !done)
 {
 	obj_ball.sprite_index = spr_pulsating_ball;
 	audio_pause_sound(snd_phase1);
+	done2 = true;
 }
