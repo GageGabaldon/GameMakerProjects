@@ -35,7 +35,7 @@ function increaseSpeed(numSpeed)
 	}
 }
 
-function bounce(cx, cy)
+function bounce(cx, cy, bot)
 {
 	if(gamePhase == 1)
 	{
@@ -45,6 +45,10 @@ function bounce(cx, cy)
 	{
 		audio_play_sound(snd_paddle_collision, 2, 0);
 		direction = point_direction(x, y, cx, cy);	
+		if(bot)
+		{
+			direction = -direction;
+		}
 		speed = -speed;
 		safe = 0;
 	}

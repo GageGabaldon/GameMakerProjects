@@ -67,10 +67,10 @@ bot =
 };
 
 points = [leftTopCorner, 
-		  leftBotCorner, 
 		  rightTopCorner, 
-		  rightBotCorner,
 		  top,
+		  leftBotCorner, 
+		  rightBotCorner,
 		  bot]
 
 function calculatePoint(xycord, special)
@@ -83,15 +83,15 @@ function calculatePoint(xycord, special)
 	{
 		if(special == "+")
 		{
-			return rightBuffered + buffer;
+			return rightBuffered;
 		}
 		else if (special == "-")
 		{
-			return leftBuffered + buffer;
+			return leftBuffered;
 		}
 		else 
 		{
-			return x + buffer;
+			return x;
 		}
 	
 	}
@@ -99,15 +99,15 @@ function calculatePoint(xycord, special)
 	{
 		if(special == "+")
 		{
-			return botBuffered + buffer;
+			return botBuffered;
 		}
 		else if (special == "-")
 		{
-			return topBuffered + buffer;
+			return topBuffered;
 		}
 		else 
 		{
-			return y + buffer;
+			return y;
 		}
 	}
 }
@@ -129,7 +129,14 @@ function checkCorners()
 		if(collision_point(points[i].cx, points[i].cy, obj_ball, true, true))
 		{
 			obj_ball.increaseSpeed(1);
-			obj_ball.bounce(points[i].cx, points[i].cy);
+			if(i > 2)
+			{
+				obj_ball.bounce(points[i].cx, points[i].cy, true);
+			}
+			else 
+			{
+				obj_ball.bounce(points[i].cx, points[i].cy, false);
+			}
 			return true;
 		}
 	}
