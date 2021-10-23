@@ -10,6 +10,10 @@ if(keyboard_check(ord("W")) && !is_collision)
 {
 	if(checkTop == 0)
 	{
+		if(obj_controller.gamePhase >= 2)
+		{
+			// play sound
+		}
 		y -= 1 * movementSpeed;
 	}
 	
@@ -19,6 +23,10 @@ if(keyboard_check(ord("S")) && !is_collision)
 {
 	if(checkBot == 0)
 	{
+		if(obj_controller.gamePhase >= 2)
+		{
+			// play sound
+		}
 		y += 1 * movementSpeed;
 	}
 }
