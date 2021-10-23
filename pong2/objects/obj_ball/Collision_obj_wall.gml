@@ -3,7 +3,7 @@
 bounceWall();
 audio_play_sound(pong_collision, 1, 0);
 
-if(obj_controller.gamePhase == 1)
+if(obj_controller.gamePhase >= 1)
 {
 	with(other)
 	{

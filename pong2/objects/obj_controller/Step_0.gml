@@ -9,10 +9,13 @@ if(player == 2 && !done)
 	audio_play_sound(snd_phase1, 3, true);
 	done = true;
 }
-else if(player == 4 && !done)
+else if(player == 4 && !done2)
 {
 	gamePhase = 2;
-	obj_ball.sprite_index = spr_pulsating_ball;
+	obj_wall.gamePhase = 2;
+	obj_ball.gamePhase = 2;
+	//obj_ball.sprite_index = spr_ball_cool;
 	audio_pause_sound(snd_phase1);
+	audio_play_sound(snd_phase2, 3, true);
 	done2 = true;
 }
