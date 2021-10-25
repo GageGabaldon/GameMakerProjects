@@ -332,7 +332,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/TweenGMS","resourceVersion":"1.0","name":"Update Log.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.5.589",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "grappleguy",

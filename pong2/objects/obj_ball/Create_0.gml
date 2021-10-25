@@ -17,6 +17,11 @@ wall1 = false;
 wall2 = false;
 gamePhase = 0;
 
+//boss battle 
+health = 10;
+battleStart = false;
+dead = false;
+
 start = 
 {
 	cx: x,
@@ -105,4 +110,15 @@ function bounceWall()
 	{
 		direction -= 1;
 	}
+}
+
+function bossBattle()
+{
+	// hide object, play sequence, set enemy sprite, show object
+	self.visible=0;
+	layer_sequence_create(layer_get_id("phase4_sequences"), 0, 20, seq_phase4_boss_creation);
+	sprite_index = spr_boss;
+	self.visible=0;
+	// MAIN BOSS BATTLE
+	battleStart = true;
 }
