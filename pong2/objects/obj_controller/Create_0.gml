@@ -17,3 +17,4 @@ done4 = false;
 draw_set_font(fnt_score);
 
 image_alpha = 0;
+health = 3;
