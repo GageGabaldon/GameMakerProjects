@@ -6,7 +6,7 @@ var collision_lyr = tile_get_index(background_lyr);
 collision = layer_tilemap_get_id(collision_lyr);
 
 spriteradius = sprite_height / 2;
-movementSpeed = 5; // 2
+movementSpeed = 4; // 2
 canMove = true;
 goal_point = 0;
 is_collision = false;
@@ -18,7 +18,6 @@ leftBuffered = self.x - ((sprite_width / 2) / 4);
 
 temp1 = 0;
 temp2 = 0;
-buffer = 1;
 pointArraySize = 6;
 
 leftTopCorner = 

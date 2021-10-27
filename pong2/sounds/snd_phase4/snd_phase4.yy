@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_phase4",
-  "duration": 0.0,
+  "soundFile": "snd_phase4.wav",
+  "duration": 22.0589561,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
