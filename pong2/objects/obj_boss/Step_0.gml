@@ -1,15 +1,48 @@
 
-// if boss isnt dead yet and the battle is going on, shoot bullet
-if(battleOn == true && dead == false)
+
+// if boss isnt dead or injured and the battle is on, shoot bullet & chase player
+if(battleOn == true && dead == false && injured == false)
 {
 	player_x = obj_player_ship.x;
 	player_y = obj_player_ship.y;
 	// trigger guitar sound
 	audio_play_sound(snd_guitar, 1, 0);
-	// shoot bullet every 5 seconds
-	if (alarm[0] < 0)
+	
+	// if we just finished a blink, stop blinking
+	if (blinking == true && image_index == image_number)
 	{
-		alarm[0] = random_range(0.1, 1)*room_speed;
+		blinking = false;
+		sprite_index = spr_boss;	
+	}
+	
+	// wait random amount of time before blinking
+	if (alarm[2] < 0)
+	{
+		alarm[2] = random_range(3, 6) * room_speed;
+	}
+
+	// if boss just lost 10 health points
+	if (lost_health == 10)
+	{
+		sprite_index = spr_boss_shield
+		injured = true;
+		speed = 0;
+		lost_health = 0;
+		// have injured boss idle before chasing player again
+		if (alarm[1] < 0)
+		{
+			alarm[1] = 3 * room_speed;
+		}
+	}
+	else
+	{
+		// shoot bullet at random
+		if (alarm[0] < 0)
+		{
+			alarm[0] = random_range(0.1, 1) * room_speed;
+		}
+		// chase player
+		move_towards_point(player_x, player_y, boss_speed);
 	}
 }
 
@@ -22,5 +55,5 @@ if(dead == false && hp <= 0)
 	obj_player_ship.battleOn = false;
 	// create death sequence at place of death
 	instance_destroy(self);
-	sequence = layer_sequence_create(layer_get_id("phase4_sequences"), x, y, seq_phase4_boss_death)
+	sequence = layer_sequence_create(layer_get_id("phase4_sequences"), x, y, seq_phase4_boss_death);
 }

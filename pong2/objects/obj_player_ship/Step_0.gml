@@ -20,6 +20,7 @@ if(mouse_check_button_pressed(mb_left) && battleOn == true && dead == false)
 	bullet = instance_create_layer(x, y, "phase4_objects", obj_player_bullet)
 	// shoot bullet at mouse
 	bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+	bullet.image_angle = point_direction(x, y, mouse_x, mouse_y) + 90;
 	bullet.speed = 4;
 }
 

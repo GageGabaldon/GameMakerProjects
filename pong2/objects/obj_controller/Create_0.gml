@@ -18,3 +18,13 @@ draw_set_font(fnt_score);
 
 image_alpha = 0;
 health = 3;
+
+// sequences for alarm to see
+seq_teamup = 0;
+seq_bosscreation = 0;
+
+// locations to be filled in
+boss_x = 670;
+boss_y = 127;
+player_x = 657;
+player_y = 544;

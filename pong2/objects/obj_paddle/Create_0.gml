@@ -7,6 +7,7 @@ collision = layer_tilemap_get_id(collision_lyr);
 
 spriteradius = sprite_height / 2;
 movementSpeed = 5; // 2
+canMove = true;
 goal_point = 0;
 is_collision = false;
 
@@ -171,12 +172,4 @@ function checkCollisions()
 		}
 		return false;
 	}
-}
-
-
-// paddles head to the middle of the board before combination sequence
-function combinePaddles()
-{
-	// move towards middle of board at 5 speed
-	move_towards_point(20, 20, 5);
 }

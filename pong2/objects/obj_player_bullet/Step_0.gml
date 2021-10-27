@@ -6,6 +6,18 @@ if (place_meeting(x, y, obj_boss))
 	// decrement boss health
 	with (obj_boss)
 	{
-		hp -=1;	
+		// player bullets dont work if boss got injured (hes barriering)
+		if (injured == false)
+		{
+			lost_health += 1;
+			with (obj_boss_healthbar)
+			{
+				hp -=1;
+			}
+				with (obj_boss)
+				{
+					hp -= 1;
+				}
+		}
 	}
 }

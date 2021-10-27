@@ -6,7 +6,7 @@ checkTop = tilemap_get_at_pixel(collision, x, y - spriteradius);
 updatePoints();
 is_collision = checkCollisions();
 
-if(keyboard_check(ord("W")) && !is_collision)
+if(keyboard_check(ord("W")) && !is_collision && canMove)
 {
 	if(checkTop == 0)
 	{
@@ -19,7 +19,7 @@ if(keyboard_check(ord("W")) && !is_collision)
 	
 }
 
-if(keyboard_check(ord("S")) && !is_collision)
+if(keyboard_check(ord("S")) && !is_collision && canMove)
 {
 	if(checkBot == 0)
 	{
