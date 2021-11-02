@@ -13,6 +13,7 @@ done = false;
 done2 = false;
 done3 = false;
 done4 = false;
+player_it = true;
 
 draw_set_font(fnt_score);
 

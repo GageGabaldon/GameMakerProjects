@@ -37,14 +37,13 @@ function increaseSpeed(numSpeed)
 
 function bounce(cx, cy, bot)
 {
-	if(gamePhase == 1)
+	if(gamePhase >= 1)
 	{
 		image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
 	}
 	if(safe > safeBounce)
 	{
 		audio_play_sound(snd_paddle_collision, 2, 0);
-		direction = point_direction(x, y, cx, cy);	
 		if(bot)
 		{
 			// provide randomness to bounce angles
@@ -57,7 +56,11 @@ function bounce(cx, cy, bot)
 			{
 				direction_offset = random_range(-10, -5);		
 			}
-			direction = -direction + direction_offset;
+			direction = point_direction(x, y, cx, cy);
+		}
+		else 
+		{
+			direction = point_direction(x, y, cx, cy);	
 		}
 		speed = -speed;
 		safe = 0;
@@ -66,7 +69,7 @@ function bounce(cx, cy, bot)
 
 function genericBounce()
 {
-	if(gamePhase == 1)
+	if(gamePhase >= 1)
 	{
 		image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
 	}

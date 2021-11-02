@@ -16,6 +16,7 @@ botBuffered = self.y + (sprite_height / 2);
 rightBuffered = self.x + ((sprite_width / 2) / 4);
 leftBuffered = self.x - ((sprite_width / 2) / 4);
 
+bounced = false;
 temp1 = 0;
 temp2 = 0;
 pointArraySize = 6;
@@ -67,11 +68,11 @@ bot =
 };
 
 points = [leftTopCorner, 
-		  rightTopCorner, 
 		  top,
-		  leftBotCorner, 
-		  rightBotCorner,
-		  bot]
+		  rightTopCorner, 
+		  leftBotCorner,
+		  bot,
+		  rightBotCorner]
 
 function calculatePoint(xycord, special)
 {
@@ -128,14 +129,16 @@ function checkCorners()
 	{
 		if(collision_point(points[i].cx, points[i].cy, obj_ball, true, true))
 		{
+			show_debug_message("Corner");
+			
 			obj_ball.increaseSpeed(1);
 			if(i > 2)
 			{
-				obj_ball.bounce(points[i].cx, points[i].cy, true);
+				obj_ball.bounce(points[i].cx, points[i].cy, true, self);
 			}
 			else 
 			{
-				obj_ball.bounce(points[i].cx, points[i].cy, false);
+				obj_ball.bounce(points[i].cx, points[i].cy, false, self);
 			}
 			return true;
 		}
@@ -144,10 +147,6 @@ function checkCorners()
 	return false;
 }
 
-// debug
-function showDebug(){
-	show_debug_message(points[0].cx);
-}
 
 // checks collisions 
 function checkCollisions()
@@ -166,7 +165,8 @@ function checkCollisions()
 			
 		if(inst != noone)
 		{
-			obj_ball.genericBounce();
+			obj_ball.genericBounce(self);
+			show_debug_message("Generic");
 			return true;
 		}
 		return false;
