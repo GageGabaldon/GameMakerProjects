@@ -54,6 +54,14 @@ if(dead == false && hp <= 0)
 	battleOn = false;
 	obj_player_ship.battleOn = false;
 	// create death sequence at place of death
-	instance_destroy(self);
+	visible = false;
 	sequence = layer_sequence_create(layer_get_id("phase4_sequences"), x, y, seq_phase4_boss_death);
+	
+	// wait for sequence to be finished before leaving room
+	if (alarm[3] < 0)
+	{
+		alarm[3] = 5 * room_speed;
+	}
+
+	
 }

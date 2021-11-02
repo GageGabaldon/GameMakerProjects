@@ -31,7 +31,12 @@ if(dead == false && hp <= 0)
 	// stop battle
 	battleOn = false;
 	obj_boss.battleOn = false;
-	instance_destroy(self);
-	// go to rm_lose
-	//room_goto(rm_lose);
+	// play player dies sequence
+	visible = false;
+	sequence = layer_sequence_create(layer_get_id("phase4_sequences"), x, y, seq_phase4_player_death);
+	// wait for sequence to finish, then go to room lose
+	if (alarm[0] < 0)
+	{
+		alarm[0] = 5 * room_speed;
+	}
 }

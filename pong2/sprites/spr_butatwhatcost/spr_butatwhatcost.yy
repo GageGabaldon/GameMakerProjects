@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 127,
+  "bbox_right": 731,
   "bbox_top": 0,
-  "bbox_bottom": 95,
+  "bbox_bottom": 64,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 128,
-  "height": 128,
+  "width": 732,
+  "height": 65,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d0c74158-4946-4e15-8dd8-4cd3cd96d133","path":"sprites/spr_tileset/spr_tileset.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0c74158-4946-4e15-8dd8-4cd3cd96d133","path":"sprites/spr_tileset/spr_tileset.yy",},"LayerId":{"name":"13a1746c-871e-424b-b148-82d026b06459","path":"sprites/spr_tileset/spr_tileset.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},"resourceVersion":"1.0","name":"d0c74158-4946-4e15-8dd8-4cd3cd96d133","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bd82f0aa-fb60-4614-bc6d-01d6cbe71b28","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bd82f0aa-fb60-4614-bc6d-01d6cbe71b28","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},"LayerId":{"name":"0371e773-584d-4413-950b-5f6f1fe3d699","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_butatwhatcost","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},"resourceVersion":"1.0","name":"bd82f0aa-fb60-4614-bc6d-01d6cbe71b28","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},
+    "spriteId": {"name":"spr_butatwhatcost","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2684b266-2f85-43e5-9cbb-cd2913ae4698","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0c74158-4946-4e15-8dd8-4cd3cd96d133","path":"sprites/spr_tileset/spr_tileset.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"40b88a88-451a-4cdd-8acd-8ba491fe0e25","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd82f0aa-fb60-4614-bc6d-01d6cbe71b28","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},
+    "parent": {"name":"spr_butatwhatcost","path":"sprites/spr_butatwhatcost/spr_butatwhatcost.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_tileset",
+    "name": "spr_butatwhatcost",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"13a1746c-871e-424b-b148-82d026b06459","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0371e773-584d-4413-950b-5f6f1fe3d699","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_tileset",
+  "name": "spr_butatwhatcost",
   "tags": [],
   "resourceType": "GMSprite",
 }
