@@ -80,6 +80,7 @@
     {"id":{"name":"TGMS_MultiPropertySetter__","path":"scripts/TGMS_MultiPropertySetter__/TGMS_MultiPropertySetter__.yy",},"order":7,},
     {"id":{"name":"TweenScript","path":"scripts/TweenScript/TweenScript.yy",},"order":1,},
     {"id":{"name":"__image_xscale","path":"scripts/__image_xscale/__image_xscale.yy",},"order":5,},
+    {"id":{"name":"obj_particle_controller","path":"objects/obj_particle_controller/obj_particle_controller.yy",},"order":18,},
     {"id":{"name":"TweenEasySpeed","path":"scripts/TweenEasySpeed/TweenEasySpeed.yy",},"order":6,},
     {"id":{"name":"ext_path__","path":"scripts/ext_path__/ext_path__.yy",},"order":0,},
     {"id":{"name":"spr_start","path":"sprites/spr_start/spr_start.yy",},"order":36,},
