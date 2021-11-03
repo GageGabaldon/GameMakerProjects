@@ -1,8 +1,10 @@
 // wait for sequences
-
 //destroy sequences
 layer_sequence_destroy(seq_teamup);
 layer_sequence_destroy(seq_bosscreation);
+
+//destory pongwalls
+instance_destroy(obj_wall);
 
 //create objects
 instance_create_layer(player_x, player_y, "phase4_objects", obj_player_ship);

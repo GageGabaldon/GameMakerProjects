@@ -5,8 +5,6 @@ if(battleOn == true && dead == false && injured == false)
 {
 	player_x = obj_player_ship.x;
 	player_y = obj_player_ship.y;
-	// trigger guitar sound
-	audio_play_sound(snd_guitar, 1, 0);
 	
 	// if we just finished a blink, stop blinking
 	if (blinking == true && image_index == image_number)
@@ -22,7 +20,7 @@ if(battleOn == true && dead == false && injured == false)
 	}
 
 	// if boss just lost 10 health points
-	if (lost_health == 10)
+	if (lost_health == 25)
 	{
 		sprite_index = spr_boss_shield
 		injured = true;

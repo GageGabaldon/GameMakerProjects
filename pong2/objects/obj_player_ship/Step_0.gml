@@ -14,8 +14,8 @@ y += v_speed;
 // send bullet where w
 if(mouse_check_button_pressed(mb_left) && battleOn == true && dead == false)
 {
-	// trigger guitar sound
-	//audio_play_sound(snd_guitar, 1, 0);
+	// trigger player bullet sound
+	audio_play_sound(snd_player_pew, 1, false);
 	// create bullet
 	bullet = instance_create_layer(x, y, "phase4_objects", obj_player_bullet)
 	// shoot bullet at mouse

@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_phase4.wav",
-  "duration": 7.987664,
+  "soundFile": "snd_hitshield.wav",
+  "duration": 1.114558,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_phase4",
+  "name": "snd_hitshield",
   "tags": [],
   "resourceType": "GMSound",
 }
