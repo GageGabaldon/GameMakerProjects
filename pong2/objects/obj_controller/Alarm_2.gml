@@ -6,6 +6,10 @@ layer_sequence_destroy(seq_bosscreation);
 //destory pongwalls
 instance_destroy(obj_wall);
 
+//var lay_id = layer_get_id("Background");
+//var back_id = layer_background_get_id(lay_id);
+//layer_background_sprite(back_id, spr_background);
+
 //create objects
 instance_create_layer(player_x, player_y, "phase4_objects", obj_player_ship);
 instance_create_layer(boss_x, boss_y, "phase4_objects", obj_boss);
