@@ -7,7 +7,8 @@
 ## Instructions
 
 This is pong like you have never seen it before exhilarating and extravagant
-and perhaps a little sexy. Play pong progress and don't die.
+and perhaps a little sexy. Play pong progress and don't die. The longer you Play
+the greater the game gets. Play until you hit ten points :)
 
 Paddle MOVEMENT
 - W to move up
