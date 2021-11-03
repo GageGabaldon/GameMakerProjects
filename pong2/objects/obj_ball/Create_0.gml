@@ -41,6 +41,10 @@ function bounce(cx, cy, bot)
 	{
 		image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
 	}
+	if (gamePhase >= 3)
+	{
+		part_particles_create(global.P_System, x, y, global.Particle1, 25);
+	}
 	if(safe > safeBounce)
 	{
 		audio_play_sound(snd_paddle_collision, 2, 0);
@@ -72,6 +76,10 @@ function genericBounce()
 	if(gamePhase >= 1)
 	{
 		image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
+	}
+	if (gamePhase >= 3)
+	{
+		part_particles_create(global.P_System, x, y, global.Particle1, 25);
 	}
 	if(safe > safeBounce)
 	{
