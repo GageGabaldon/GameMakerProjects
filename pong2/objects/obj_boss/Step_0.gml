@@ -61,7 +61,7 @@ if(dead == false && hp <= 0)
 	// create death sequence at place of death
 	visible = false;
 	sequence = layer_sequence_create(layer_get_id("phase4_sequences"), x, y, seq_phase4_boss_death);
-	
+	audio_sound_gain(snd_phase4, 0, 5000);
 	// wait for sequence to be finished before leaving room
 	if (alarm[3] < 0)
 	{

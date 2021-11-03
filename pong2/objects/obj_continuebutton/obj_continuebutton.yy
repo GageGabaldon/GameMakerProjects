@@ -32,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_backtotitlebutton",
+  "name": "obj_continuebutton",
   "tags": [],
   "resourceType": "GMObject",
 }

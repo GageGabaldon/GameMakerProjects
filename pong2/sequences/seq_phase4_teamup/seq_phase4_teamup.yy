@@ -87,7 +87,7 @@
   "eventStubScript": null,
   "parent": {
     "name": "Sequences",
-    "path": "folders/Sequences.yy",
+    "path": "folders/Paths/Sequences.yy",
   },
   "resourceVersion": "1.3",
   "name": "seq_phase4_teamup",

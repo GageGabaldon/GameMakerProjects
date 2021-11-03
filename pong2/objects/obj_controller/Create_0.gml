@@ -11,7 +11,7 @@ scoreboardy = 200;
 
 score2x = 761;
 score2y = 200;
-player = 8;
+player = 0;
 gamePhase = 0;
 gameWin = false;
 done = false;
