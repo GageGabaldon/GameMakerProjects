@@ -42,7 +42,14 @@ if(battleOn == true && dead == false && injured == false)
 			alarm[0] = random_range(0.1, 1) * room_speed;
 		}
 		// chase player
-		move_towards_point(player_x, player_y, boss_speed);
+		if (obj_player_ship.dead == false)
+		{
+			move_towards_point(player_x, player_y, boss_speed);
+		}
+		else
+		{
+			speed = 0;
+		}
 	}
 }
 
@@ -60,8 +67,7 @@ if(dead == false && hp <= 0)
 	// wait for sequence to be finished before leaving room
 	if (alarm[3] < 0)
 	{
-		alarm[3] = 5 * room_speed;
+		alarm[3] = 35 * room_speed;
 	}
 
-	
 }
