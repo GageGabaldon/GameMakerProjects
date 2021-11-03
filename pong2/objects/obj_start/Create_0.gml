@@ -5,5 +5,6 @@ image_xscale = 4;
 image_yscale = 4;
 TweenEasyFade(0, 1, 10, 20, EaseInCubic);
 
+persistent = false;
 wait =0;
-waitMax = 60;
+waitMax = 60; 

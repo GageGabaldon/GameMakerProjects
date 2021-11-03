@@ -11,4 +11,4 @@ wait = 0;
 shake_time = 30;
 shake_magnitude = 5;
 shake_fade = 0.2;
-played = false;
+played = false; 

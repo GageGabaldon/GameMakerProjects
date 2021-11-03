@@ -8,4 +8,4 @@ if(iterate == delay)
 else 
 {
 	iterate += 1;
-}
+} 
