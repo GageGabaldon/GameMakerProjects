@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+centerPos = 180;
+frequency = 0.07;
+amplitude = 20;
+timer = 0;
+
 scoreboardx = 561;
 scoreboardy = 200;
 
