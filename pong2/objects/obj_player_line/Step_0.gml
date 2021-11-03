@@ -30,3 +30,8 @@ if(keyboard_check(ord("S")) && !is_collision && canMove)
 		y += 1 * movementSpeed;
 	}
 }
+
+if (obj_controller.gamePhase >= 3)
+	{
+		movementSpeed = 8;
+	}

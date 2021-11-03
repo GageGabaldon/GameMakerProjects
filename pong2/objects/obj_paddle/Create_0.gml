@@ -172,3 +172,4 @@ function checkCollisions()
 		return false;
 	}
 }
+
