@@ -4,6 +4,7 @@
     {"id":{"name":"snd_paddle_collision","path":"sounds/snd_paddle_collision/snd_paddle_collision.yy",},"order":3,},
     {"id":{"name":"image_angle__","path":"scripts/image_angle__/image_angle__.yy",},"order":14,},
     {"id":{"name":"vspeed__","path":"scripts/vspeed__/vspeed__.yy",},"order":28,},
+    {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},"order":12,},
     {"id":{"name":"ext_DSMap__","path":"scripts/ext_DSMap__/ext_DSMap__.yy",},"order":9,},
     {"id":{"name":"EaseInOutExpo","path":"scripts/EaseInOutExpo/EaseInOutExpo.yy",},"order":11,},
     {"id":{"name":"EaseOutQuint","path":"scripts/EaseOutQuint/EaseOutQuint.yy",},"order":29,},
@@ -347,7 +348,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/TweenGMS","resourceVersion":"1.0","name":"Update Log.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.3.574",
+    "IDEVersion": "2.3.5.589",
   },
   "resourceVersion": "1.4",
   "name": "pong2",
