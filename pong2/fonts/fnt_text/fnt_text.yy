@@ -4,7 +4,7 @@
   "interpreter": 0,
   "pointRounding": 0,
   "fontName": "Arial Black",
-  "styleName": "Black",
+  "styleName": "Regular",
   "size": 18.0,
   "bold": false,
   "italic": false,

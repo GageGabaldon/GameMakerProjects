@@ -27,5 +27,5 @@ if (instance_exists(obj_ball))
 }
 if (obj_controller.gamePhase >= 3)
 	{
-		movementSpeed = 8;
+		movementSpeed = 5;
 	}
