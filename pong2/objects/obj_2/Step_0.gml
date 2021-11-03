@@ -30,7 +30,7 @@ else
 		} 
 		} 
 	}
-	
+
 	if(ok && !played)
 	{
 		played = true;

@@ -66,6 +66,7 @@ function bounce(cx, cy, bot)
 		{
 			direction = point_direction(x, y, cx, cy);	
 		}
+		show_debug_message(direction);
 		speed = -speed;
 		safe = 0;
 	}
