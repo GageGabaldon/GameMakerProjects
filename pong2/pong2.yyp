@@ -267,6 +267,7 @@
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"macOS","path":"options/mac/options_mac.yy",},
   ],
   "isDnDProject": false,
   "isEcma": false,
@@ -346,7 +347,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/TweenGMS","resourceVersion":"1.0","name":"Update Log.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.5.589",
+    "IDEVersion": "2.3.3.574",
   },
   "resourceVersion": "1.4",
   "name": "pong2",
