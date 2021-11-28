@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_spawn",
+  "name": "obj_game_controller",
   "tags": [],
   "resourceType": "GMObject",
 }

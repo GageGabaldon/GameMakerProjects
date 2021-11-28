@@ -6,6 +6,7 @@ if (mouse_x > (x - sprite_width / 2) && mouse_x < x + sprite_width)
 {
 	if (mouse_y > (y - sprite_height / 2) && mouse_y < y + sprite_width)
 	{
+		draw_set_color(c_black);
 		draw_circle(x,y,range,true);
 	}
 }
