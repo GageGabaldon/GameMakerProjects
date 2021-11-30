@@ -31,6 +31,7 @@
     {"id":{"name":"obj_tower3","path":"objects/obj_tower3/obj_tower3.yy",},"order":9,},
     {"id":{"name":"spr_tower1","path":"sprites/spr_tower1/spr_tower1.yy",},"order":2,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":1,},
+    {"id":{"name":"obj_shop","path":"objects/obj_shop/obj_shop.yy",},"order":18,},
     {"id":{"name":"obj_button_lvl1","path":"objects/obj_button_lvl1/obj_button_lvl1.yy",},"order":15,},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},"order":6,},
     {"id":{"name":"obj_back_button","path":"objects/obj_back_button/obj_back_button.yy",},"order":17,},

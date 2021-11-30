@@ -11,4 +11,4 @@ global.spd = 1;
 global.level = 1;
 global.player_hp = 100;
 
-global.gold = 1000;
+global.gold = 150;

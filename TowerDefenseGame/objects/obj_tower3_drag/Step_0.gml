@@ -3,7 +3,8 @@
 x = mouse_x;
 y = mouse_y;
 
-if (place_meeting(x,y,obj_collision) || place_meeting(x,y,obj_tower_parent))
+if (place_meeting(x,y,obj_collision) || place_meeting(x,y,obj_tower_parent)
+    || place_meeting(x,y,obj_shop))
 {
 	col = c_red;
 }
