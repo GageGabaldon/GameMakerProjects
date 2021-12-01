@@ -4,3 +4,4 @@ range = 50;
 attack_speed = room_speed / 5;
 is_attacking = false;
 object_to_shoot = noone;
+damageType = "electric";
