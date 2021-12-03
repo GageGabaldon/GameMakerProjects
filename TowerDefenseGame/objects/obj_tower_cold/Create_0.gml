@@ -7,3 +7,7 @@ attack_speed = room_speed / 3;
 is_attacking = false;
 object_to_shoot = noone;
 damageType = "freezing";
+
+criticalFloor = 0;
+criticalMax = 100;
+criticalPoint = 90;
