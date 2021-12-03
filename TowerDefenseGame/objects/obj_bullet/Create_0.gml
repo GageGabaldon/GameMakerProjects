@@ -3,3 +3,4 @@
 damageType = "normal";
 damageNum = 20;
 damageSpread = 0;
+effectDuration = 1;

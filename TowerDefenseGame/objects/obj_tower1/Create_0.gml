@@ -8,4 +8,4 @@ damageType = "flaming";
 
 criticalFloor = 0;
 criticalMax = 100;
-criticalPoint = 90;
+criticalPoint = 75;

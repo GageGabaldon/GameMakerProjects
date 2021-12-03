@@ -4,6 +4,7 @@ var enemy = self;
 with(other)
 {
 	enemy.hp -= 20;
+	enemy.effectDuration = effectDuration;
 	m_send(enemy.fsm, damageType);
 	
 	instance_destroy();
