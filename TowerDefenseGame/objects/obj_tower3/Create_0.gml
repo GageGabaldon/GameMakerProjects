@@ -9,4 +9,4 @@ damageType = "electric";
 
 criticalFloor = 0;
 criticalMax = 100;
-criticalPoint = 85;
+criticalPoint = 15;

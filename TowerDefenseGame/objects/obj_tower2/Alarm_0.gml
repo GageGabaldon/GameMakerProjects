@@ -4,7 +4,7 @@ if (instance_exists(object_to_shoot))
 {
 	var bullet = instance_create_depth(x,y,-9,obj_bullet);
 	var critical = irandom_range(criticalFloor, criticalMax);
-	if(critical > criticalPoint)
+	if(critical < criticalChance)
 	{
 		bullet.damageType = self.damageType;
 	}

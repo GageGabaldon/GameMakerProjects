@@ -10,4 +10,4 @@ damageType = "freezing";
 
 criticalFloor = 0;
 criticalMax = 100;
-criticalPoint = 80;
+criticalChance = 50;
