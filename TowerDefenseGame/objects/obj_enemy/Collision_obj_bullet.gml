@@ -3,7 +3,7 @@
 var enemy = self;
 with(other)
 {
-	enemy.hp -= 20;
+	enemy.hp -= damageNum;
 	enemy.effectDuration = effectDuration;
 	m_send(enemy.fsm, damageType);
 	

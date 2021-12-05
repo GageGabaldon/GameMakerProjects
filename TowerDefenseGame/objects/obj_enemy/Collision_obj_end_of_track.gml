@@ -7,6 +7,6 @@ if (global.player_hp > 0 && global.player_hp - 10 > 0)
 }
 else
 {
-	room_goto(rm_main_menu);
+	room_goto(rm_lose);
 	//transition back to main menu or something
 }

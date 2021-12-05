@@ -170,7 +170,7 @@ function changePathSpeed(num)
 
 function changeHealth(num)
 {
-	hp = num;
+	hp += num;
 }
 
 // does not spread to unique targets yet
@@ -207,5 +207,5 @@ function spreadElectro(numX, numY, spread, dmg, slow)
 	}
 }
 
-changeHealth(80);
+changeHealth(-80);
 changePathSpeed(2);

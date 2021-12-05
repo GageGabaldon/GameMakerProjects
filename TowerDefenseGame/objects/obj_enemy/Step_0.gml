@@ -3,6 +3,7 @@
 if (hp <= 0)
 {
 	global.gold += 10;
+	instance_create_depth(x,y,-1,obj_fly_dead);
 	instance_destroy()
 }
 

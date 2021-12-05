@@ -1,0 +1,1 @@
+instance_create_depth(566, 256, -1, obj_frog_boss);

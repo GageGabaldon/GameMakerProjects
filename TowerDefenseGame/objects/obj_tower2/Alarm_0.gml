@@ -7,8 +7,9 @@ if (instance_exists(object_to_shoot))
 	if(critical < criticalChance)
 	{
 		bullet.damageType = self.damageType;
+		bullet.damageNum = self.bulletDamage;
 	}
-	bullet.speed = 10;
+	bullet.speed = bulletSpeed;
 	bullet.direction = point_direction(x,y,object_to_shoot.x,object_to_shoot.y);
 	alarm[0] = attack_speed;
 }

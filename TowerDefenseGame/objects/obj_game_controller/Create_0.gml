@@ -5,6 +5,7 @@ spawned_counter = 0;
 spawn_rate = 1 * room_speed;
 alarm[0] = 1;
 alarm[1] = room_speed * 5;
+final_level = false;
 
 global.hp = 100;
 global.spd = 1;
@@ -17,7 +18,7 @@ function generateEnemies()
 {
 	if(spawned_counter < enemy_amount)
 	{
-		if(global.level > 5)
+		if(global.level >= 5 && global.level < 10)
 		{
 			if(spawned_counter < enemy_amount / 2)
 			{
@@ -26,12 +27,12 @@ function generateEnemies()
 			}
 			else{instance_create_depth(x,y,-1,obj_enemy);}
 		}
-		else if(global.level > 10)
+		else if(global.level >= 10 && global.level < 15)
 		{
 			var enemy = choose(obj_enemy_fast, obj_enemy);
 			instance_create_depth(x,y,-1, enemy);
 		}
-		else if (global.level > 15)
+		else if (global.level >= 15 && global.level < 20)
 		{
 			if(spawned_counter < enemy_amount / 2)
 			{
@@ -44,7 +45,7 @@ function generateEnemies()
 				instance_create_depth(x,y,-1, enemy);
 			}
 		}
-		else if (global.level > 20)
+		else if (global.level >= 20 && global.level < 25)
 		{
 				var enemy = choose(obj_enemy_fast, obj_enemy, obj_enemy_fat);
 				instance_create_depth(x,y,-1, enemy);
@@ -61,7 +62,7 @@ function generateEnemies()
 				instance_create_depth(x,y,-1, enemy);
 			}
 		}
-		else 
+		else
 		{
 			instance_create_depth(x,y,-1,obj_enemy);
 		}

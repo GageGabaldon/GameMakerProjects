@@ -172,7 +172,7 @@ function changePathSpeed(num)
 
 function changeHealth(num)
 {
-	hp = num;
+	hp += num;
 }
 
 // does not spread to unique targets yet
