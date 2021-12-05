@@ -10,3 +10,5 @@ if(damageOverTime)
 {
 	hp -= 1;
 }
+
+image_angle = direction - 180;
