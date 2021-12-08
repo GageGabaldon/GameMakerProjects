@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"41574ed6-369c-408c-9996-772b86e0e99d","path":"sprites/spr_tower3/spr_tower3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"41574ed6-369c-408c-9996-772b86e0e99d","path":"sprites/spr_tower3/spr_tower3.yy",},"LayerId":{"name":"73097581-712d-441d-91e6-df1cf761da03","path":"sprites/spr_tower3/spr_tower3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_tower3","path":"sprites/spr_tower3/spr_tower3.yy",},"resourceVersion":"1.0","name":"41574ed6-369c-408c-9996-772b86e0e99d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4f534cde-b1da-4843-ab89-0bbee8718cb1","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4f534cde-b1da-4843-ab89-0bbee8718cb1","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},"LayerId":{"name":"5dfbd7ac-a458-47f5-82c5-f3a5def86243","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_ice_frog","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},"resourceVersion":"1.0","name":"4f534cde-b1da-4843-ab89-0bbee8718cb1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_tower3","path":"sprites/spr_tower3/spr_tower3.yy",},
+    "spriteId": {"name":"spr_ice_frog","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ae325e1d-a8ef-44e1-b514-152cf81c0f6b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"41574ed6-369c-408c-9996-772b86e0e99d","path":"sprites/spr_tower3/spr_tower3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c9fc152b-47e2-4c3f-8d0f-d3fc14c1dc87","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f534cde-b1da-4843-ab89-0bbee8718cb1","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_tower3","path":"sprites/spr_tower3/spr_tower3.yy",},
+    "parent": {"name":"spr_ice_frog","path":"sprites/spr_ice_frog/spr_ice_frog.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_tower3",
+    "name": "spr_ice_frog",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"73097581-712d-441d-91e6-df1cf761da03","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5dfbd7ac-a458-47f5-82c5-f3a5def86243","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_tower3",
+  "name": "spr_ice_frog",
   "tags": [],
   "resourceType": "GMSprite",
 }
