@@ -15,7 +15,6 @@ global.spd = 1;
 global.level = 25;
 global.player_hp = 100;
 global.sell_gold = 0;
-
 global.gold = 150;
 
 function generateEnemies()

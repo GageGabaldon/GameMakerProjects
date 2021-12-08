@@ -1,26 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(instance_exists(obj_enemy_boss))
-{
-	final_level = true;
-}
-
-if(final_level == true)
-{
-	if(!instance_exists(obj_enemy_boss))
-	{
-		room_goto(rm_win);
-	}
-}
 
 if (instance_number(obj_enemy) <= 0 && waveDone)
 {
+	if(global.level == 25 && global.rm == 1)
+	{
+		room_goto(rm_win);
+	}
 	spawned_counter = 0;
 	enemy_amount++;	
 	global.level++;
-	global.hp += 23;
-	global.spd += 0.125;
 	waveDone = false;
+	if(global.rm == 2)
+	{
+		global.hp += 40;
+		global.spd += 0.175;
+	}
+	else 
+	{
+		global.hp += 30;
+		global.spd += 0.125;
+	}
 	if(spawn_rate > 2)
 	{
 		spawn_rate -= 1;
