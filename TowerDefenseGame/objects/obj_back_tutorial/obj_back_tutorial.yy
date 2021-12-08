@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_back_button",
+  "name": "obj_back_tutorial",
   "tags": [],
   "resourceType": "GMObject",
 }

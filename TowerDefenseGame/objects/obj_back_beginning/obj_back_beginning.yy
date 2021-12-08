@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_level_select_button",
+  "name": "obj_back_beginning",
   "tags": [],
   "resourceType": "GMObject",
 }
