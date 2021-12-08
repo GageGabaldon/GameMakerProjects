@@ -54,7 +54,7 @@ function generateEnemies()
 				var enemy = choose(obj_enemy_fast, obj_enemy, obj_enemy_fat);
 				instance_create_depth(x,y,-1, enemy);
 		}
-		else if (global.level >= 25)
+		else if (global.level >= 25 && global.level < 26)
 		{
 			if(spawned_counter  == enemy_amount - 1)
 			{
