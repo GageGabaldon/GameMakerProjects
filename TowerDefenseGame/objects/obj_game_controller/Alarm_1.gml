@@ -13,14 +13,18 @@ if(final_level == true)
 	}
 }
 
-if (instance_number(obj_enemy) <= 0)
+if (instance_number(obj_enemy) <= 0 && waveDone)
 {
 	spawned_counter = 0;
 	enemy_amount++;	
 	global.level++;
-	global.hp += 20;
-	global.spd += 0.12;
-	spawn_rate -= 2.8;
+	global.hp += 23;
+	global.spd += 0.125;
+	waveDone = false;
+	if(spawn_rate > 2)
+	{
+		spawn_rate -= 1;
+	}
 	show_debug_message("New Wave");
 	
 	alarm[0] = spawn_rate;

@@ -47,12 +47,6 @@ m_rule(fsm, "acidic", "frozen", "acid");
 m_rule(fsm, "acidic", "flame", "acid");
 m_rule(fsm, "acidic", "electro", "acid");
 
-m_action(fsm, "<*" , function()
-{
-	path_speed = global.spd;
-	image_blend = c_white;
-	damageOverTime = false;
-});
 
 m_action(fsm, ">normal", function() {
 	show_debug_message("normal");
@@ -72,7 +66,7 @@ m_action(fsm, ">frozen", function() {
 		// pushback
 		show_debug_message("PushBack");
 		path_speed = -global.spd;
-		alarm[0] = room_speed * effectDuration;
+		alarm[0] = room_speed/2 * effectDuration / 2;
 	}
 	else if(lastState == "electro")
 	{
@@ -133,7 +127,7 @@ m_action(fsm, ">flame", function() {
 		// pushback
 		show_debug_message("PushBack");
 		path_speed = -global.spd;
-		alarm[0] = room_speed;
+		alarm[0] = room_speed/2 * effectDuration / 2;
 	}
 	damageOverTime = true;
 	image_blend = c_red;
