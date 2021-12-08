@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+audio_play_sound(snd_background_music, 5, true);
+
 enemy_amount  = 5;
 spawned_counter = 0;
 spawn_rate = 1 * room_speed;
@@ -11,6 +14,7 @@ global.hp = 100;
 global.spd = 1;
 global.level = 1;
 global.player_hp = 100;
+global.sell_gold = 0;
 
 global.gold = 150;
 
