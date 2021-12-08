@@ -3,6 +3,8 @@
 if (instance_exists(object_to_shoot))
 {
 	var bullet = instance_create_depth(x,y,-9,obj_bullet);
+	
+	bullet.image_blend = c_purple;
 	var critical = irandom_range(criticalFloor, criticalMax);
 	if(critical < criticalChance)
 	{
