@@ -54,7 +54,7 @@ function generateEnemies()
 				var enemy = choose(obj_enemy_fast, obj_enemy, obj_enemy_fat);
 				instance_create_depth(x,y,-1, enemy);
 		}
-		else if (global.level == 25)
+		else if (global.level >= 25)
 		{
 			if(spawned_counter  == enemy_amount - 1)
 			{
@@ -65,6 +65,22 @@ function generateEnemies()
 				var enemy = choose(obj_enemy_fast, obj_enemy, obj_enemy_fat);
 				instance_create_depth(x,y,-1, enemy);
 			}
+		}
+		else if(global.rm == 2 && global.level > 25)
+		{
+			if(spawned_counter  == enemy_amount % global.level)
+			{
+				instance_create_depth(x, y, -1, obj_enemy_boss);
+			}
+			else
+			{
+				var enemy = choose(obj_enemy_fast, obj_enemy, obj_enemy_fat);
+				instance_create_depth(x,y,-1, enemy);
+			}
+		}
+		else if(global.rm == 2 && global.level >= 50)
+		{
+				instance_create_depth(x,y,-1, obj_enemy_boss);
 		}
 		else
 		{
