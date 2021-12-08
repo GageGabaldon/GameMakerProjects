@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_level1",
-    "path": "sprites/spr_level1/spr_level1.yy",
+    "name": "spr_fly_normal",
+    "path": "sprites/spr_fly_normal/spr_fly_normal.yy",
   },
   "solid": false,
   "visible": true,
