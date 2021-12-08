@@ -18,9 +18,9 @@ if (instance_number(obj_enemy) <= 0)
 	spawned_counter = 0;
 	enemy_amount++;	
 	global.level++;
-	global.hp += 15;
-	global.spd += 0.1;
-	spawn_rate -= 2.5;
+	global.hp += 20;
+	global.spd += 0.12;
+	spawn_rate -= 2.8;
 	show_debug_message("New Wave");
 	
 	alarm[0] = spawn_rate;

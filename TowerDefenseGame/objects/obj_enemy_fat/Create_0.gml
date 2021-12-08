@@ -1,9 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-/// @description Insert description here
-// You can write your code in this editor
-/// @description Insert description here
-// You can write your code in this editor
 switch(global.rm)
 {
 	case 1: path_start(Path1,global.spd,0,1); break;
@@ -24,6 +20,7 @@ electroMaxSpread = 5;
 electroRange = 30;
 dmg = 10;
 effectDuration = 1;
+moredmg = false;
 
 m_rule(fsm, "normal", "flame", "normal");
 m_rule(fsm, "normal", "frozen", "normal");
@@ -75,13 +72,13 @@ m_action(fsm, ">frozen", function() {
 		// pushback
 		show_debug_message("PushBack");
 		path_speed = -global.spd;
-		alarm[0] = room_speed;
+		alarm[0] = room_speed * effectDuration;
 	}
 	else if(lastState == "electro")
 	{
 		show_debug_message("Slow Spread");
 		// spread slow
-		spreadElectro(self.x, self.y, electroMaxSpread, dmg, true);
+		spreadElectro(electroMaxSpread, dmg, true);
 	}
 	
 	path_speed = global.spd / slowNum;
@@ -102,6 +99,7 @@ m_action(fsm, ">acid", function() {
 	{
 		//spread acid
 		show_debug_message("SpreadAcid");
+		spreadAcid(electroMaxSpread, dmg)
 	}
 	else if(lastState == "electro")
 	{
@@ -112,6 +110,7 @@ m_action(fsm, ">acid", function() {
 	
 	image_blend = c_green;
 	lastState = "acid";
+	moredmg = true;
 	alarm[1] = room_speed * effectDuration;
 });
 
@@ -121,11 +120,13 @@ m_action(fsm, ">flame", function() {
 	{
 		// spread acid
 		show_debug_message("SpreadAcid");
+		spreadAcid(electroMaxSpread, dmg);
 	}
 	else if (lastState == "electro")
 	{
 		// burst
 		show_debug_message("Burst");
+		hp -= dmg * 2;
 	}
 	else if(lastState == "frozen")
 	{
@@ -134,7 +135,6 @@ m_action(fsm, ">flame", function() {
 		path_speed = -global.spd;
 		alarm[0] = room_speed;
 	}
-	
 	damageOverTime = true;
 	image_blend = c_red;
 	lastState = "flame";
@@ -147,21 +147,22 @@ m_action(fsm, ">electro", function() {
 	{
 		show_debug_message("ElectroSpread");
 		// increase electro
-		spreadElectro(self.x, self.y, electroMaxSpread * 2, dmg, false);
+		spreadElectro(electroMaxSpread * 2, dmg, false);
 	}
 	else if (lastState == "flame")
 	{
 		// burst
 		show_debug_message("Burst");
+		hp -= dmg * 2;
 	}
 	else if(lastState == "frozen")
 	{
 		show_debug_message("Slow Spread");
 		// spread slow
-		spreadElectro(self.x, self.y, electroMaxSpread, dmg, true);
+		spreadElectro(electroMaxSpread, dmg, true);
 	}
 	
-	spreadElectro(self.x, self.y, electroMaxSpread, dmg, false);
+	spreadElectro(electroMaxSpread, dmg, false);
 	lastState = "electro";
 });
 
@@ -172,40 +173,122 @@ function changePathSpeed(num)
 
 function changeHealth(num)
 {
-	hp += num;
+	hp = num;
 }
 
-// does not spread to unique targets yet
-function spreadElectro(numX, numY, spread, dmg, slow)
+function spreadElectro(spread, dmg, slow)
 {
 	var index = 0;
 	var last = self;
-	var electrocuted = [];
-	var enemy = instance_nearest(numX,numY,obj_enemy);
+	var enemies = [];
+	var seenEnemies = [];
+	array_push(seenEnemies, self);
+	
 	self.hp -= dmg;
 	self.image_blend = c_purple;
 	if(slow)
 	{
 		self.path_speed = path_speed / 2;
 	}
-	self.alarm[1] = room_speed * effectDuration;
 	
-	while(index < spread)
+	self.alarm[1] = room_speed * effectDuration;
+	var i;
+	for (i = 0; i < instance_number(obj_enemy); i += 1)
 	{
-		if (enemy != noone)
+		 array_push(enemies, instance_find(obj_enemy,i));
+	}
+	i = 0;
+	var start = 0;
+	var saw = false;
+	var enemy;
+	var length = array_length(enemies);
+	show_debug_message(enemies);
+	
+	while(i < length && start < spread)
+	{	
+		enemy = enemies[i];
+		saw = false;
+		for(var index = 0; index < array_length(seenEnemies); index++)
 		{
-			if (point_distance(last.x,last.y,enemy.x,enemy.y) <= electroRange)
+			if(enemy.id == seenEnemies[index].id)
 			{
-				enemy.hp -= dmg;
-				if(slow)
-				{
-					enemy.path_speed = path_speed / 2;
-				}
+				saw = true;
 			}
 		}
-		last = enemy;
-		enemy = instance_nearest(enemy.x, enemy.y, obj_enemy);
-		index++;
+		if(!saw)
+		{
+			if(point_distance(last.x,last.y,enemy.x,enemy.y <= electroRange))
+			{
+				show_debug_message("spread");
+				enemy.hp -= dmg;
+				show_debug_message(enemy.hp);
+				enemy.image_blend = c_purple;
+				if(slow)
+				{
+					enemy.path_speed = enemy.path_speed / 2;
+				}
+				show_debug_message("done");
+				enemy.alarm[1] = room_speed * effectDuration;
+				start++;
+				array_push(seenEnemies, enemy);
+				last = enemy;
+			}
+		}
+		i++;
+	}
+}
+
+function spreadAcid(spread, dmg)
+{
+	var index = 0;
+	var last = self;
+	var enemies = [];
+	var seenEnemies = [];
+	array_push(seenEnemies, self);
+	
+	self.hp -= dmg;
+	self.moredmg = true;
+	self.image_blend = c_green;
+	self.alarm[1] = room_speed * effectDuration;
+
+	var i;
+	for (i = 0; i < instance_number(obj_enemy); i += 1)
+	{
+		 array_push(enemies, instance_find(obj_enemy,i));
+	}
+
+	i = 0;
+	var start = 0;
+	var saw = false;
+	var enemy;
+	var length = array_length(enemies);
+	show_debug_message(enemies);
+	
+	while(i < length && start < spread)
+	{	
+		enemy = enemies[i];
+		saw = false;
+		for(var index = 0; index < array_length(seenEnemies); index++)
+		{
+			if(enemy.id == seenEnemies[index].id)
+			{
+				saw = true;
+			}
+		}
+		if(!saw)
+		{
+			if(point_distance(last.x,last.y,enemy.x,enemy.y <= electroRange))
+			{
+				enemy.hp -= dmg;
+				enemy.image_blend = c_green;
+				enemy.moredmg = true;
+				enemy.alarm[1] = room_speed * effectDuration;
+				start++;
+				array_push(seenEnemies, enemy);
+				last = enemy;
+			}
+		}
+		i++;
 	}
 }
 

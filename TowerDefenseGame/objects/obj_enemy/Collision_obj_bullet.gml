@@ -3,9 +3,17 @@
 var enemy = self;
 with(other)
 {
-	enemy.hp -= damageNum;
-	enemy.effectDuration = effectDuration;
-	m_send(enemy.fsm, damageType);
+	if(enemy.moredmg)
+	{
+		enemy.hp -= damageNum * 2;
+	}
+	else 
+	{
+		enemy.hp -= damageNum;
+	}
 	
+	enemy.effectDuration = effectDuration;
+	
+	m_send(enemy.fsm, damageType);
 	instance_destroy();
 }

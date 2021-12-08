@@ -72,7 +72,7 @@ m_action(fsm, ">frozen", function() {
 		// pushback
 		show_debug_message("PushBack");
 		path_speed = -global.spd;
-		alarm[0] = room_speed;
+		alarm[0] = room_speed * effectDuration;
 	}
 	else if(lastState == "electro")
 	{
@@ -99,6 +99,7 @@ m_action(fsm, ">acid", function() {
 	{
 		//spread acid
 		show_debug_message("SpreadAcid");
+		spreadAcid(electroMaxSpread, dmg)
 	}
 	else if(lastState == "electro")
 	{
@@ -119,11 +120,13 @@ m_action(fsm, ">flame", function() {
 	{
 		// spread acid
 		show_debug_message("SpreadAcid");
+		spreadAcid(electroMaxSpread, dmg);
 	}
 	else if (lastState == "electro")
 	{
 		// burst
 		show_debug_message("Burst");
+		hp -= dmg * 2;
 	}
 	else if(lastState == "frozen")
 	{
@@ -132,7 +135,6 @@ m_action(fsm, ">flame", function() {
 		path_speed = -global.spd;
 		alarm[0] = room_speed;
 	}
-	
 	damageOverTime = true;
 	image_blend = c_red;
 	lastState = "flame";
@@ -151,6 +153,7 @@ m_action(fsm, ">electro", function() {
 	{
 		// burst
 		show_debug_message("Burst");
+		hp -= dmg * 2;
 	}
 	else if(lastState == "frozen")
 	{
@@ -173,7 +176,6 @@ function changeHealth(num)
 	hp = num;
 }
 
-// does not spread to unique targets yet
 function spreadElectro(spread, dmg, slow)
 {
 	var index = 0;
@@ -188,14 +190,13 @@ function spreadElectro(spread, dmg, slow)
 	{
 		self.path_speed = path_speed / 2;
 	}
+	
 	self.alarm[1] = room_speed * effectDuration;
-
 	var i;
 	for (i = 0; i < instance_number(obj_enemy); i += 1)
 	{
 		 array_push(enemies, instance_find(obj_enemy,i));
 	}
-
 	i = 0;
 	var start = 0;
 	var saw = false;
@@ -237,8 +238,7 @@ function spreadElectro(spread, dmg, slow)
 	}
 }
 
-// does not spread to unique targets yet
-function spreadAcid(spread, dmg, slow)
+function spreadAcid(spread, dmg)
 {
 	var index = 0;
 	var last = self;
@@ -247,11 +247,8 @@ function spreadAcid(spread, dmg, slow)
 	array_push(seenEnemies, self);
 	
 	self.hp -= dmg;
+	self.moredmg = true;
 	self.image_blend = c_green;
-	if(slow)
-	{
-		self.path_speed = path_speed / 2;
-	}
 	self.alarm[1] = room_speed * effectDuration;
 
 	var i;
@@ -282,15 +279,9 @@ function spreadAcid(spread, dmg, slow)
 		{
 			if(point_distance(last.x,last.y,enemy.x,enemy.y <= electroRange))
 			{
-				show_debug_message("spread");
 				enemy.hp -= dmg;
-				show_debug_message(enemy.hp);
-				enemy.image_blend = c_purple;
-				if(slow)
-				{
-					enemy.path_speed = enemy.path_speed / 2;
-				}
-				show_debug_message("done");
+				enemy.image_blend = c_green;
+				enemy.moredmg = true;
 				enemy.alarm[1] = room_speed * effectDuration;
 				start++;
 				array_push(seenEnemies, enemy);
